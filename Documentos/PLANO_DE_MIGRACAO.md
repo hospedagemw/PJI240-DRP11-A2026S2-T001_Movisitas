@@ -55,7 +55,7 @@ Os scripts da origem têm dependências e devem ser revisados na ordem antes de 
 - Branch `fase-1/estrutura-inicial` enviada ao GitHub com o commit `30882fd`.
 - Documentação inicial preparada para revisão.
 - Código da aplicação e scripts do banco ainda não incorporados.
-- Integração à `main` pendente.
+- Integrada à `main` pelo Pull Request #1.
 
 ## Atualização de 21/09/2026 — fase 2
 

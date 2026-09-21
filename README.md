@@ -26,8 +26,8 @@ O código de origem já existia antes desta migração. Os commits deste reposit
 
 | Fase | Branch | Entrega registrada | Situação |
 | --- | --- | --- | --- |
-| 1 — Estrutura inicial | `fase-1/estrutura-inicial` | Apresentação, escopo e planejamento; commit `30882fd` | Registrada na branch; integração à main pendente |
-| 2 — Modelagem do banco | `fase-2/modelagem-banco` | MER, DER, dicionário, análise de integridade e Supabase; commit `3e3d17b` | Documentação preparada; validação do banco remoto pendente |
+| 1 — Estrutura inicial | `fase-1/estrutura-inicial` | Apresentação, escopo e planejamento; commit `30882fd` | Integrada à main pelo PR #1 |
+| 2 — Modelagem do banco | `fase-2/modelagem-banco` | MER, DER, dicionário, análise de integridade e Supabase; commit `3e3d17b` | Entrega documental do PR #2; validação do banco remoto pendente |
 | 3 — Fundação da aplicação | A criar | Estrutura Flutter, identidade e navegação | Planejada |
 | 4 — Solução inicial | A criar | Clientes, vendedores, agenda, visitas e integração com o banco | Planejada |
 | 5 a 7 — Melhorias, validação e entrega final | A criar | Evolução conforme retorno da comunidade, testes e materiais acadêmicos | Planejadas |
