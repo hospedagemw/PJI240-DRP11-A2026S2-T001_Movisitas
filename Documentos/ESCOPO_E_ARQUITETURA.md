@@ -46,3 +46,9 @@ Um vendedor possui uma carteira de clientes. Cada cliente pode ter visitas agend
 - Revisar o esquema existente e suas dependências.
 - Definir o ambiente de banco e hospedagem do projeto acadêmico.
 - Detalhar os critérios de aceitação com o grupo e a comunidade externa.
+
+## Detalhamento do banco de dados
+
+A análise documental de 21/09/2026 está em [Banco de Dados](Banco_de_Dados/README.md), com MER, DER, dicionário das oito tabelas da aplicação, normalização, integridade, matriz de acesso e arquitetura do Supabase. O conjunto distingue o núcleo de visitas da extensão de pedidos ERP e registra propostas de melhoria e testes pendentes.
+
+O esquema foi reconstruído a partir de 13 migrations locais da origem; ainda não foi confrontado com o banco remoto. A relação carteira-cliente permite múltiplas carteiras por cliente no SQL existente. As migrations e o código continuam fora desta etapa de documentação.
