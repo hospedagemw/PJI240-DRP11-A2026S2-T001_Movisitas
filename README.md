@@ -20,6 +20,7 @@ O código de origem já existia antes desta migração. Os commits deste reposit
 - [Orientações da disciplina](Documentos/PI.txt)
 - [Plano de migração por fases](Documentos/PLANO_DE_MIGRACAO.md)
 - [Escopo e arquitetura previstos](Documentos/ESCOPO_E_ARQUITETURA.md)
+- [Banco de dados: MER, DER, dicionário e Supabase](Documentos/Banco_de_Dados/README.md)
 
 ## Organização
 

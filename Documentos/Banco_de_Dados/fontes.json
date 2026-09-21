@@ -1,0 +1,112 @@
+{
+  "data_analise": "2026-09-21",
+  "commit_origem": "9abc65a63c4d0bfde67d5550f8ac74b121d9f63a",
+  "banco_remoto_inspecionado": false,
+  "arquivos": [
+    {
+      "caminho": "supabase/migrations/202608110001_initial_schema.sql",
+      "sha256": "2ac48f7f00a7895d610d09a79c939e2d0838eae851700a7bfd04c7bd9bec84b4",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/supabase/migrations/202608110001_initial_schema.sql"
+    },
+    {
+      "caminho": "supabase/migrations/202608110002_seller_profiles.sql",
+      "sha256": "b2220f44a3b78b383f4807639801b149b076c3821efa39942ebbc4d9b36bae25",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/supabase/migrations/202608110002_seller_profiles.sql"
+    },
+    {
+      "caminho": "supabase/migrations/202608110003_portfolio_reassignment.sql",
+      "sha256": "584046a0a1bab2f1a7430a1396e9f500bcccce6a7c4906cd0c1f5cc7a1de4694",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/supabase/migrations/202608110003_portfolio_reassignment.sql"
+    },
+    {
+      "caminho": "supabase/migrations/202608110004_user_management.sql",
+      "sha256": "c281b8e55871fd6b5a27d4da4b33536212dd610098413c18a395d6dedf65e689",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/supabase/migrations/202608110004_user_management.sql"
+    },
+    {
+      "caminho": "supabase/migrations/202608110005_bootstrap_administrator.sql",
+      "sha256": "d46b402ec8ee2822a886963cc30c10987ad6d37f3e771cae6d6a94b3e1b2edb9",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/supabase/migrations/202608110005_bootstrap_administrator.sql"
+    },
+    {
+      "caminho": "supabase/migrations/202608110006_manage_user_profile.sql",
+      "sha256": "e49428d6365bc2d14c4b8ed236f8b639e0ad0b41e11b0e391aa57cf5e7e6e6b9",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/supabase/migrations/202608110006_manage_user_profile.sql"
+    },
+    {
+      "caminho": "supabase/migrations/202608110007_visit_agenda.sql",
+      "sha256": "3562ad560a37f742cffa235f3535694a50c3fd193f8a03ae72e084d5cb074c7b",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/supabase/migrations/202608110007_visit_agenda.sql"
+    },
+    {
+      "caminho": "supabase/migrations/202608130001_sellers_update_own_clients.sql",
+      "sha256": "024b49e357c47599a9753475271231757c0c4fd00597b4f14559e70d75932860",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/supabase/migrations/202608130001_sellers_update_own_clients.sql"
+    },
+    {
+      "caminho": "supabase/migrations/202608130008_client_internal_code.sql",
+      "sha256": "3ea2d1d6870a3dc17aeebece6e62d2e7f6856281171530ec9b938bd5a684cec3",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/supabase/migrations/202608130008_client_internal_code.sql"
+    },
+    {
+      "caminho": "supabase/migrations/202608140001_sales_orders.sql",
+      "sha256": "a103b6f1507afc18fd1432a47a18eb30b7da472fc60e29581d80d01a81299435",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/supabase/migrations/202608140001_sales_orders.sql"
+    },
+    {
+      "caminho": "supabase/migrations/202608240001_portfolio_admin_only.sql",
+      "sha256": "a362ebe16ae180676eef30955be3057e2c4f52742c61516c87b4ba37eda58ff1",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/supabase/migrations/202608240001_portfolio_admin_only.sql"
+    },
+    {
+      "caminho": "supabase/migrations/202608260001_sales_orders_portfolio_read.sql",
+      "sha256": "9c160c546235b56b138bf2737f92a822fbc9854fde5d14cedd5058482fb9c3bc",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/supabase/migrations/202608260001_sales_orders_portfolio_read.sql"
+    },
+    {
+      "caminho": "supabase/migrations/202608260002_sellers_create_own_clients.sql",
+      "sha256": "aded57ac10f68d0bd3ffc4cb72495940df33f07869b520b98e4609311f897316",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/supabase/migrations/202608260002_sellers_create_own_clients.sql"
+    },
+    {
+      "caminho": "supabase/functions/create-user/index.ts",
+      "sha256": "7c1910b6257bbdc63fffa6fb432db6d1b45317e0ec53acfbaa62fb7ada5902bd",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/supabase/functions/create-user/index.ts"
+    },
+    {
+      "caminho": "supabase/functions/lookup-customer/index.ts",
+      "sha256": "66bce8b28bdbb3110fdf9487049cb560d109441136d913d62ef09fb21d492154",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/supabase/functions/lookup-customer/index.ts"
+    },
+    {
+      "caminho": "supabase/functions/update-user/index.ts",
+      "sha256": "beff96afb826d1eb238fd7d567dd6d284edc3c2c6dd6a96f87c6cd8e3ce90e94",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/supabase/functions/update-user/index.ts"
+    },
+    {
+      "caminho": "lib/data/supabase_repository.dart",
+      "sha256": "bed1f569dde0ec4fe91923fea912d8fa360475fad63ae3349780799f76d7c9ea",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/lib/data/supabase_repository.dart"
+    },
+    {
+      "caminho": "lib/data/supabase_auth_service.dart",
+      "sha256": "cac5e50e7764efd0b09c7d12322a93ae423a1877dc31cb989f23338b8018ef73",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/lib/data/supabase_auth_service.dart"
+    },
+    {
+      "caminho": "docs/database.md",
+      "sha256": "ced25dff5015064566ed533580e982b17fba0e4ff5c4fd010c249ac2c39eab4a",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/docs/database.md"
+    },
+    {
+      "caminho": "docs/setup-supabase.md",
+      "sha256": "d18b5e0926abf14e7446f4dc76631c2de385feb5b624ca8d6c931212c01d71a7",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/docs/setup-supabase.md"
+    },
+    {
+      "caminho": "docs/supabase-status.md",
+      "sha256": "b5be110268520fee0d382b868850f7937d6c7f6d30f1eaf163836f13d51ef040",
+      "referencia": "https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/docs/supabase-status.md"
+    }
+  ]
+}
