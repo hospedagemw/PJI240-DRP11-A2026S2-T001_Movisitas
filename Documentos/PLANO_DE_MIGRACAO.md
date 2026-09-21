@@ -27,18 +27,19 @@ O TXT também prevê avaliação colaborativa na sétima quinzena. Os prazos de 
 | Fase | Conteúdo | Critério de conclusão | Alinhamento |
 | --- | --- | --- | --- |
 | 1 — Estrutura e documentação | Apresentação, escopo, arquitetura e plano de migração | Documentação revisada e origem identificada | Quinzena 3 |
-| 2 — Fundação da aplicação | Estrutura Flutter, identidade visual, navegação e demonstração com dados fictícios | Aplicação executa e navegação principal é validada | Quinzena 3 |
-| 3 — Solução inicial | Clientes, vendedores, agenda e registro básico de visitas; banco e autenticação necessários a esses fluxos | Fluxo principal validado, permissões verificadas e evidências para o relatório parcial | Quinzena 4 |
-| 4 — Melhorias da solução | Sugestões da comunidade, histórico, geolocalização e indicadores priorizados | Ajustes registrados e critérios de aceitação atendidos | Quinzena 5 |
-| 5 — Validação | Testes, acessibilidade, análise dos resultados e preparação da demonstração | Resultados documentados e limitações identificadas | Quinzena 6 |
-| 6 — Entrega final | Apoio técnico ao relatório, roteiro e evidências para o vídeo | Materiais revisados pelo grupo e versão final identificada | Quinzena 7 |
+| 2 — Modelagem do banco | MER, DER, dicionário, integridade e arquitetura Supabase | Documentação rastreável aos scripts; limitações e testes pendentes identificados | Quinzena 4 |
+| 3 — Fundação da aplicação | Estrutura Flutter, identidade visual, navegação e demonstração com dados fictícios | Aplicação executa e navegação principal é validada | Quinzena 4 (replanejada) |
+| 4 — Solução inicial | Clientes, vendedores, agenda e registro básico de visitas; banco e autenticação necessários a esses fluxos | Fluxo principal validado, permissões verificadas e evidências para o relatório parcial | Quinzena 4 |
+| 5 — Melhorias da solução | Sugestões da comunidade, histórico, geolocalização e indicadores priorizados | Ajustes registrados e critérios de aceitação atendidos | Quinzena 5 |
+| 6 — Validação | Testes, acessibilidade, análise dos resultados e preparação da demonstração | Resultados documentados e limitações identificadas | Quinzena 6 |
+| 7 — Entrega final | Apoio técnico ao relatório, roteiro e evidências para o vídeo | Materiais revisados pelo grupo e versão final identificada | Quinzena 7 |
 
 As fases técnicas não correspondem uma a uma às quinzenas. Pedidos do ERP e outras funções da origem serão avaliados separadamente, pois não são necessários ao escopo inicial de visitas.
 
 ## Procedimento por entrega
 
 1. Delimitar o módulo e seus critérios de aceitação.
-2. Criar a branch a partir da `main` atualizada, após a integração da etapa anterior.
+2. Criar uma branch por fase. Preferir a `main` atualizada após a integração da etapa anterior; quando houver dependência ainda em revisão, partir da branch anterior e registrar essa dependência no Pull Request.
 3. Selecionar os arquivos da origem e revisar dependências antes da incorporação.
 4. Adaptar a identificação do projeto, as configurações e os testes necessários.
 5. Registrar o que foi migrado, alterado e validado, inclusive limitações.
@@ -51,7 +52,13 @@ Os scripts da origem têm dependências e devem ser revisados na ordem antes de 
 
 ## Estado da fase 1
 
-- Branch local criada: `fase-1/estrutura-inicial`.
+- Branch `fase-1/estrutura-inicial` enviada ao GitHub com o commit `30882fd`.
 - Documentação inicial preparada para revisão.
 - Código da aplicação e scripts do banco ainda não incorporados.
-- Esta entrega registra a documentação inicial; envio da branch e Pull Request são etapas posteriores.
+- Integração à `main` pendente.
+
+## Atualização de 21/09/2026 — fase 2
+
+A modelagem do banco foi separada em `fase-2/modelagem-banco`, baseada na fase 1, com o commit `3e3d17b`. A análise usa a revisão `9abc65a63c4d0bfde67d5550f8ac74b121d9f63a` da origem e está detalhada em [Banco de Dados](Banco_de_Dados/README.md).
+
+A fundação da aplicação passa a ser a fase 3, planejada para a quarta quinzena juntamente com a solução inicial. Essa revisão do planejamento técnico não altera as datas de entrega da faculdade. O esquema remoto e os testes do banco continuam pendentes.
