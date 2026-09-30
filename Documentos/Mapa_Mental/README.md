@@ -10,7 +10,7 @@ O exemplo fornecido foi usado como referência de organização visual. O conte�
 
 ![Mapa mental do Movisitas com seis eixos: acesso e perfis, clientes e carteiras, agenda comercial, atendimento em campo, gestão e histórico, tecnologia e qualidade.](mapa-mental-movisitas.png)
 
-Fonte: elaboração para o projeto Movisitas, com apoio de IA (2026).
+Fonte: elaboração para o projeto Movisitas (2026).
 
 O mapa representa o escopo planejado; não comprova implantação, teste de funcionalidades ou validação pela comunidade externa.
 
