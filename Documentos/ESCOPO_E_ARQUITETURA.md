@@ -56,3 +56,7 @@ O esquema foi reconstruído a partir de 13 migrations locais da origem; ainda n�
 ## Visão de ideação
 
 O [mapa mental](Mapa_Mental/README.md) apresenta seis eixos do escopo: acesso e perfis, clientes e carteiras, agenda comercial, atendimento em campo, gestão e histórico, tecnologia e qualidade. A figura complementa o MER e o DER com uma visão das ideias do produto e oferece descrição textual acessível.
+
+## Protótipo de interface
+
+O [guia de prototipação](Prototipacao/README.md) descreve as telas e funcionalidades por perfil. A [galeria](Prototipacao/GALERIA.md) permite consultar as capturas no GitHub. A implementação HTML é independente do Flutter e usa dados em memória para discutir navegação e formulários. Os recursos adaptados da origem e as propostas complementares estão identificados por tela.
