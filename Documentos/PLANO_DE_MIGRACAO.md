@@ -65,3 +65,9 @@ A fundação da aplicação passa a ser a fase 3, planejada para a quarta quinze
 ## Atualização de 30/09/2026 — mapa mental
 
 Complemento documental de ideação em `codex/mapa-mental-ideacao`: [mapa mental do Movisitas](Mapa_Mental/README.md), com figura PNG, versão vetorial SVG, fonte Mermaid e texto de apoio ao relatório. A entrega organiza as ideias do escopo existente; não altera a numeração das fases nem indica implementação ou validação em campo. A fase 3 permanece destinada à fundação Flutter.
+
+## Atualização de 30/09/2026 — prototipação das telas
+
+Entrega complementar em `codex/prototipacao-telas`, baseada na branch do mapa mental. O [protótipo navegável](Prototipacao/README.md) apresenta 23 telas e fluxos, com dados fictícios, descrição funcional, galeria de imagens e fontes consultadas. Foram verificados os principais fluxos simulados e a apresentação em computador e celular.
+
+A entrega representa a experiência proposta e não a migração Flutter ou a implantação do banco. O grupo poderá usar as jornadas para coletar sugestões da comunidade e priorizar a solução inicial; essa validação em campo ainda não foi realizada.

@@ -1,0 +1,20 @@
+{
+  "screens": 23,
+  "desktop": "1440x1000",
+  "mobile": "390x844",
+  "pageErrors": [],
+  "externalRequests": [],
+  "passed": [
+    "screen routes",
+    "seller login",
+    "visit start and finish",
+    "seller UI access restriction",
+    "client creation",
+    "portfolio transfer",
+    "scheduling and cancellation",
+    "import duplication guard",
+    "password confirmation",
+    "HTML report export",
+    "mobile page width"
+  ]
+}

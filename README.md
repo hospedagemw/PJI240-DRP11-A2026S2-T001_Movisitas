@@ -10,7 +10,7 @@ Centralizar clientes, agendas, vendedores e históricos de atendimento para melh
 
 ## Situação atual
 
-**Documentação das fases 1 e 2, com complemento de ideação: mapa mental.** Este repositório ainda não contém uma aplicação executável. A migração do projeto Visitas será feita em entregas progressivas, com revisão e validação de cada módulo.
+**Documentação das fases 1 e 2, mapa mental e protótipo navegável das telas.** Este repositório ainda não contém a aplicação Flutter migrada; o protótipo HTML demonstra a experiência com dados fictícios. A migração do projeto Visitas será feita em entregas progressivas, com revisão e validação de cada módulo.
 
 O código de origem já existia antes desta migração. Os commits deste repositório registrarão sua incorporação e adaptação ao projeto acadêmico, além dos novos desenvolvimentos realizados pelo grupo.
 
@@ -58,6 +58,18 @@ Preparar a fundação Flutter com dados fictícios e detalhar os ajustes do banc
 O mapa organiza o escopo planejado e apoia a etapa de ideação do relatório. Consulte a [documentação do mapa mental](Documentos/Mapa_Mental/README.md), com descrição acessível, texto de apoio e versões SVG e Mermaid editáveis. A figura não representa validação de funcionalidades já implantadas.
 
 Entrega complementar em `codex/mapa-mental-ideacao`, preparada em 30/09/2026. A próxima fase numerada continua sendo a fundação da aplicação.
+
+## Prototipação das telas
+
+A entrega inclui **23 telas e fluxos navegáveis**, descrição de cada funcionalidade e capturas para o relatório. Abrange acesso, dashboard, agenda, clientes, carteiras, equipe, visitas, localização, pedidos, usuários e relatórios.
+
+- [Guia do protótipo e resumo das funcionalidades](Documentos/Prototipacao/README.md)
+- [Galeria das 23 telas](Documentos/Prototipacao/GALERIA.md)
+- [Protótipo HTML](Documentos/Prototipacao/index.html): baixe a pasta completa e abra o arquivo no navegador; o GitHub exibe apenas seu código.
+
+![Prévia da visão comercial](Documentos/Prototipacao/preview-desktop.png)
+
+Branch: `codex/prototipacao-telas`, criada a partir de `codex/mapa-mental-ideacao` para preservar a entrega anterior. Protótipo testado em computador e celular, sem conexão com o banco. As simulações não substituem os testes da aplicação nem a validação pela comunidade. A fundação Flutter permanece como próxima fase de implementação.
 
 ## Organização
 
