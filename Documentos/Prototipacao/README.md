@@ -122,4 +122,4 @@ Evidência resumida em [VALIDACAO.json](VALIDACAO.json). Testes de integração,
 - `preview-desktop.png`, `preview-mobile.png`: imagens gerais para consulta e relatório.
 - `FONTES.md`: correspondência com a aplicação existente e propostas.
 
-Fonte das telas e capturas: elaboração para o projeto Movisitas, com apoio de IA (2026). Dados fictícios; nenhum resultado de entrevistas ou validação em campo é afirmado por este material.
+Fonte das telas e capturas: elaboração para o projeto Movisitas (2026). Dados fictícios; nenhum resultado de entrevistas ou validação em campo é afirmado por este material.
