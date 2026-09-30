@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1140" viewBox="0 0 1800 1140">
+<title>Mapa mental do Movisitas</title>
+<desc>Gestão de visitas comerciais organizada em acesso, clientes e carteiras, agenda, atendimento, gestão e tecnologia. Representa o escopo planejado.</desc>
+<rect width="1800" height="1140" fill="white"/>
+<text x="900" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" fill="#263445">FIGURA 1 — MAPA MENTAL DO MOVISITAS</text>
+<text x="900" y="112" font-family="Arial, sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#263445">Ideação da solução • Gestão de visitas comerciais para a Movipress</text>
+<polyline points="735,555 630,270 565,270" fill="none" stroke="#2563A6" stroke-width="4" stroke-linejoin="round"/>
+<text x="70" y="245" font-family="Arial, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#2563A6">ACESSO E PERFIS</text>
+<polyline points="630,270 630,303 95,303" fill="none" stroke="#2563A6" stroke-width="2" stroke-linejoin="round"/>
+<text x="105" y="295" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Login e autenticação</text>
+<polyline points="630,270 630,357 95,357" fill="none" stroke="#2563A6" stroke-width="2" stroke-linejoin="round"/>
+<text x="105" y="349" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Administrador, gestor e vendedor</text>
+<polyline points="630,270 630,411 95,411" fill="none" stroke="#2563A6" stroke-width="2" stroke-linejoin="round"/>
+<text x="105" y="403" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Permissões por perfil e carteira</text>
+<polyline points="735,555 630,555 565,555" fill="none" stroke="#087E78" stroke-width="4" stroke-linejoin="round"/>
+<text x="70" y="530" font-family="Arial, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#087E78">CLIENTES E CARTEIRAS</text>
+<polyline points="630,555 630,588 95,588" fill="none" stroke="#087E78" stroke-width="2" stroke-linejoin="round"/>
+<text x="105" y="580" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Cadastro, contato e endereço</text>
+<polyline points="630,555 630,642 95,642" fill="none" stroke="#087E78" stroke-width="2" stroke-linejoin="round"/>
+<text x="105" y="634" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Clientes associados ao vendedor</text>
+<polyline points="630,555 630,696 95,696" fill="none" stroke="#087E78" stroke-width="2" stroke-linejoin="round"/>
+<text x="105" y="688" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Organização e transferência de carteira</text>
+<polyline points="735,555 630,840 565,840" fill="none" stroke="#8A5A13" stroke-width="4" stroke-linejoin="round"/>
+<text x="70" y="815" font-family="Arial, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#8A5A13">AGENDA COMERCIAL</text>
+<polyline points="630,840 630,873 95,873" fill="none" stroke="#8A5A13" stroke-width="2" stroke-linejoin="round"/>
+<text x="105" y="865" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Agendamento e reagendamento</text>
+<polyline points="630,840 630,927 95,927" fill="none" stroke="#8A5A13" stroke-width="2" stroke-linejoin="round"/>
+<text x="105" y="919" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Consulta de compromissos</text>
+<polyline points="630,840 630,981 95,981" fill="none" stroke="#8A5A13" stroke-width="2" stroke-linejoin="round"/>
+<text x="105" y="973" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Cancelamento com histórico</text>
+<polyline points="1065,555 1170,270 1235,270" fill="none" stroke="#AF3166" stroke-width="4" stroke-linejoin="round"/>
+<text x="1250" y="245" font-family="Arial, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#AF3166">ATENDIMENTO EM CAMPO</text>
+<polyline points="1170,270 1170,303 1250,303" fill="none" stroke="#AF3166" stroke-width="2" stroke-linejoin="round"/>
+<text x="1260" y="295" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Início e confirmação da visita</text>
+<polyline points="1170,270 1170,357 1250,357" fill="none" stroke="#AF3166" stroke-width="2" stroke-linejoin="round"/>
+<text x="1260" y="349" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Observações e resultado</text>
+<polyline points="1170,270 1170,411 1250,411" fill="none" stroke="#AF3166" stroke-width="2" stroke-linejoin="round"/>
+<text x="1260" y="403" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Localização, quando disponível</text>
+<polyline points="1065,555 1170,555 1235,555" fill="none" stroke="#6F49A6" stroke-width="4" stroke-linejoin="round"/>
+<text x="1250" y="530" font-family="Arial, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#6F49A6">GESTÃO E HISTÓRICO</text>
+<polyline points="1170,555 1170,588 1250,588" fill="none" stroke="#6F49A6" stroke-width="2" stroke-linejoin="round"/>
+<text x="1260" y="580" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Histórico por cliente e vendedor</text>
+<polyline points="1170,555 1170,642 1250,642" fill="none" stroke="#6F49A6" stroke-width="2" stroke-linejoin="round"/>
+<text x="1260" y="634" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Indicadores por período</text>
+<polyline points="1170,555 1170,696 1250,696" fill="none" stroke="#6F49A6" stroke-width="2" stroke-linejoin="round"/>
+<text x="1260" y="688" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Avaliação com a comunidade</text>
+<polyline points="1065,555 1170,840 1235,840" fill="none" stroke="#35703E" stroke-width="4" stroke-linejoin="round"/>
+<text x="1250" y="815" font-family="Arial, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#35703E">TECNOLOGIA E QUALIDADE</text>
+<polyline points="1170,840 1170,873 1250,873" fill="none" stroke="#35703E" stroke-width="2" stroke-linejoin="round"/>
+<text x="1260" y="865" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Flutter Web e acesso por celular</text>
+<polyline points="1170,840 1170,927 1250,927" fill="none" stroke="#35703E" stroke-width="2" stroke-linejoin="round"/>
+<text x="1260" y="919" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Supabase: dados, API e autenticação</text>
+<polyline points="1170,840 1170,981 1250,981" fill="none" stroke="#35703E" stroke-width="2" stroke-linejoin="round"/>
+<text x="1260" y="973" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#263445">Acessibilidade, testes e versionamento</text>
+<polyline points="735,555 775,515 1025,515 1065,555 1025,595 775,595 735,555" fill="none" stroke="#263445" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="735,555 775,515 1025,515 1065,555 1025,595 775,595" fill="#F2F5F9" stroke="#263445" stroke-width="4"/>
+<text x="900" y="565" font-family="Arial, sans-serif" font-size="31" font-weight="700" text-anchor="middle" fill="#263445">MOVISITAS</text>
+<text x="900" y="1030" font-family="Arial, sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#263445">Escopo planejado: o mapa não comprova funcionalidades já implantadas.</text>
+<text x="900" y="1075" font-family="Arial, sans-serif" font-size="23" font-weight="400" text-anchor="middle" fill="#263445">Fonte: elaboração para o projeto Movisitas (2026).</text>
+<text x="900" y="1110" font-family="Arial, sans-serif" font-size="21" font-weight="400" text-anchor="middle" fill="#596779">Base: plano de ação, escopo e análise do banco de dados do projeto.</text>
+</svg>

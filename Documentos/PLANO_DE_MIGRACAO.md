@@ -62,3 +62,6 @@ Os scripts da origem têm dependências e devem ser revisados na ordem antes de 
 A modelagem do banco foi separada em `fase-2/modelagem-banco`, baseada na fase 1, com o commit `3e3d17b`. A análise usa a revisão `9abc65a63c4d0bfde67d5550f8ac74b121d9f63a` da origem e está detalhada em [Banco de Dados](Banco_de_Dados/README.md).
 
 A fundação da aplicação passa a ser a fase 3, planejada para a quarta quinzena juntamente com a solução inicial. Essa revisão do planejamento técnico não altera as datas de entrega da faculdade. O esquema remoto e os testes do banco continuam pendentes.
+## Atualização de 30/09/2026 — mapa mental
+
+Complemento documental de ideação em `codex/mapa-mental-ideacao`: [mapa mental do Movisitas](Mapa_Mental/README.md), com figura PNG, versão vetorial SVG, fonte Mermaid e texto de apoio ao relatório. A entrega organiza as ideias do escopo existente; não altera a numeração das fases nem indica implementação ou validação em campo. A fase 3 permanece destinada à fundação Flutter.
