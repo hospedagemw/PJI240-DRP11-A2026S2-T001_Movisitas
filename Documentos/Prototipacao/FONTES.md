@@ -27,3 +27,9 @@ As referências são do commit `9abc65a63c4d0bfde67d5550f8ac74b121d9f63a` da ori
 | Cadastro de usuário | [Código de origem](https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/lib/app.dart#L3430) | Fluxo adaptado com dados fictícios e ações em memória |
 | Alterar minha senha | [Código de origem](https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/lib/app.dart#L471) | Fluxo adaptado com dados fictícios e ações em memória |
 | Relatório comercial | [Código de origem](https://github.com/dmsystem/Visitas/blob/9abc65a63c4d0bfde67d5550f8ac74b121d9f63a/lib/app.dart#L1336) | Fluxo adaptado com dados fictícios e ações em memória |
+
+## Referência visual publicada
+
+[Movipress Visitas](https://visitas-6ev.pages.dev/), consulta em 30/09/2026: Agenda, Vendas, Clientes, formulário de cliente e Visitas no perfil vendedor. A paleta também foi conferida no tema de `lib/app.dart`. As demais telas têm referência funcional no código, sem alegação de inspeção do ambiente administrativo.
+
+Minhas vendas: agrupamento por cliente e filtros de mês/ano, com registros inteiramente fictícios. Todas as imagens da galeria foram produzidas no protótipo local.

@@ -61,10 +61,10 @@ Entrega complementar em `codex/mapa-mental-ideacao`, preparada em 30/09/2026. A 
 
 ## Prototipação das telas
 
-A entrega inclui **23 telas e fluxos navegáveis**, descrição de cada funcionalidade e capturas para o relatório. Abrange acesso, dashboard, agenda, clientes, carteiras, equipe, visitas, localização, pedidos, usuários e relatórios.
+A entrega inclui **24 telas e fluxos navegáveis**, descrição de cada funcionalidade e capturas para o relatório. Mantém as cores da aplicação de referência, com dados exclusivamente fictícios. Abrange acesso, dashboard, agenda, vendas, clientes, carteiras, equipe, visitas, localização, pedidos, usuários e relatórios.
 
 - [Guia do protótipo e resumo das funcionalidades](Documentos/Prototipacao/README.md)
-- [Galeria das 23 telas](Documentos/Prototipacao/GALERIA.md)
+- [Galeria das 24 telas](Documentos/Prototipacao/GALERIA.md)
 - [Protótipo HTML](Documentos/Prototipacao/index.html): baixe a pasta completa e abra o arquivo no navegador; o GitHub exibe apenas seu código.
 
 ![Prévia da visão comercial](Documentos/Prototipacao/preview-desktop.png)

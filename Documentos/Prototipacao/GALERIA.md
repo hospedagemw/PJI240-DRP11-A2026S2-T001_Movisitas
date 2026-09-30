@@ -1,147 +1,153 @@
 # Galeria das telas — Movisitas
 
-Protótipo de 30/09/2026. Imagens geradas a partir do protótipo navegável, com dados fictícios. Não são capturas do ambiente de produção. [Instruções e jornadas](README.md).
+24 telas e fluxos com dados exclusivamente fictícios. Capturas do protótipo local, não do ambiente de produção. [Instruções](README.md).
 
 ## T00 — Catálogo de telas
 
 Navegação e índice das telas; proposta de apresentação acadêmica.
 
-![T00 — Catálogo de telas](telas/catalog.png)
+![Catálogo de telas](telas/catalog.png)
 
-## T01 — Acesso ao Movisitas
+## T01 — Minhas vendas
+
+Agrupa pedidos fictícios por cliente, com filtro de mês e ano; referência à tela publicada Vendas.
+
+![Minhas vendas](telas/sales.png)
+
+## T02 — Acesso ao Movisitas
 
 Representa login por e-mail e senha; o perfil é escolhido apenas para simular a experiência.
 
-![T01 — Acesso ao Movisitas](telas/login.png)
+![Acesso ao Movisitas](telas/login.png)
 
-## T02 — Recuperar acesso
+## T03 — Recuperar acesso
 
 Simula solicitação de recuperação; nenhum e-mail é enviado. Proposta, não identificada no login da origem.
 
-![T02 — Recuperar acesso](telas/recovery.png)
+![Recuperar acesso](telas/recovery.png)
 
-## T03 — Visão comercial
+## T04 — Dashboard
 
 Consulta indicadores por período e vendedor, com acesso aos relatórios.
 
-![T03 — Visão comercial](telas/dashboard.png)
+![Dashboard](telas/dashboard.png)
 
-## T04 — Meu dia
+## T05 — Meu dia
 
 Reúne progresso diário, agenda e pendências do vendedor.
 
-![T04 — Meu dia](telas/day.png)
+![Meu dia](telas/day.png)
 
-## T05 — Agenda de visitas
+## T06 — Agenda de visitas
 
 Filtra compromissos e permite agendar, reagendar, iniciar ou cancelar.
 
-![T05 — Agenda de visitas](telas/agenda.png)
+![Agenda de visitas](telas/agenda.png)
 
-## T06 — Agendar visita
+## T07 — Agendar visita
 
 Cria ou altera um agendamento com cliente, vendedor, data, hora e observações.
 
-![T06 — Agendar visita](telas/schedule.png)
+![Agendar visita](telas/schedule.png)
 
-## T07 — Clientes
+## T08 — Clientes
 
 Consulta por nome, cidade e cobertura de atendimento; dá acesso ao cadastro e às ações.
 
-![T07 — Clientes](telas/clients.png)
+![Clientes](telas/clients.png)
 
-## T08 — Detalhes do cliente
+## T09 — Detalhes do cliente
 
 Consolida cadastro, visitas e acesso aos pedidos; composição proposta a partir de ações da origem.
 
-![T08 — Detalhes do cliente](telas/client.png)
+![Detalhes do cliente](telas/client.png)
 
-## T09 — Cadastro de cliente
+## T10 — Cadastro de cliente
 
 Inclui ou edita dados cadastrais, contato, endereço, código ERP e site; simula consultas CEP/CNPJ.
 
-![T09 — Cadastro de cliente](telas/client-form.png)
+![Cadastro de cliente](telas/client-form.png)
 
-## T10 — Carteiras comerciais
+## T11 — Carteiras comerciais
 
 Representa agrupamento e transferência administrativa; tela dedicada proposta para ações presentes na origem.
 
-![T10 — Carteiras comerciais](telas/portfolios.png)
+![Carteiras comerciais](telas/portfolios.png)
 
-## T11 — Transferir cliente
+## T12 — Transferir cliente
 
 Simula a transferência para outra carteira, exclusiva do administrador.
 
-![T11 — Transferir cliente](telas/transfer.png)
+![Transferir cliente](telas/transfer.png)
 
-## T12 — Equipe comercial
+## T13 — Equipe comercial
 
 Apresentação dedicada de vendedores e suas carteiras; proposta baseada nos dados da origem.
 
-![T12 — Equipe comercial](telas/sellers.png)
+![Equipe comercial](telas/sellers.png)
 
-## T13 — Histórico de visitas
+## T14 — Visitas
 
 Consulta estados, responsáveis, datas e observações dos atendimentos.
 
-![T13 — Histórico de visitas](telas/visits.png)
+![Visitas](telas/visits.png)
 
-## T14 — Iniciar atendimento
+## T15 — Iniciar atendimento
 
 Simula início da visita, horário e localização opcional.
 
-![T14 — Iniciar atendimento](telas/checkin.png)
+![Iniciar atendimento](telas/checkin.png)
 
-## T15 — Concluir atendimento
+## T16 — Concluir atendimento
 
 Exige observações, permite resultado e próxima ação, e encerra a visita simulada.
 
-![T15 — Concluir atendimento](telas/checkout.png)
+![Concluir atendimento](telas/checkout.png)
 
-## T16 — Localização e rota
+## T17 — Localização e rota
 
 Esquema ilustrativo do endereço e roteiro textual; não consulta GPS ou serviço de mapas.
 
-![T16 — Localização e rota](telas/map.png)
+![Localização e rota](telas/map.png)
 
-## T17 — Pedidos e vendas
+## T18 — Pedidos e vendas
 
 Consulta pedidos por cliente e período; extensão da origem, fora do núcleo inicial de visitas.
 
-![T17 — Pedidos e vendas](telas/orders.png)
+![Pedidos e vendas](telas/orders.png)
 
-## T18 — Importar pedidos
+## T19 — Importar pedidos
 
 Demonstra prévia, duplicidades e confirmação com lote fictício; não processa arquivos reais.
 
-![T18 — Importar pedidos](telas/import.png)
+![Importar pedidos](telas/import.png)
 
-## T19 — Usuários e permissões
+## T20 — Usuários e permissões
 
 Lista perfis e simula cadastro, edição e ativação de usuários.
 
-![T19 — Usuários e permissões](telas/users.png)
+![Usuários e permissões](telas/users.png)
 
-## T20 — Cadastro de usuário
+## T21 — Cadastro de usuário
 
 Simula cadastro e edição por administrador; gestor pode editar apenas vendedores.
 
-![T20 — Cadastro de usuário](telas/user-form.png)
+![Cadastro de usuário](telas/user-form.png)
 
-## T21 — Alterar minha senha
+## T22 — Alterar minha senha
 
 Simula validação da senha atual e confirmação da nova senha, sem armazená-las.
 
-![T21 — Alterar minha senha](telas/password.png)
+![Alterar minha senha](telas/password.png)
 
-## T22 — Relatório comercial
+## T23 — Relatório comercial
 
 Filtra dados fictícios e permite imprimir o relatório ou exportar um HTML local.
 
-![T22 — Relatório comercial](telas/reports.png)
+![Relatório comercial](telas/reports.png)
 
 ## Experiência móvel
 
-Layout demonstrado em 390 × 844 pixels, perfil vendedor.
+Agenda no perfil vendedor, 390 × 844 pixels.
 
-![Meu dia no celular](preview-mobile.png)
+![Agenda móvel](preview-mobile.png)

@@ -1,20 +1,108 @@
 {
-  "screens": 23,
-  "desktop": "1440x1000",
-  "mobile": "390x844",
-  "pageErrors": [],
-  "externalRequests": [],
-  "passed": [
-    "screen routes",
-    "seller login",
-    "visit start and finish",
-    "seller UI access restriction",
-    "client creation",
-    "portfolio transfer",
-    "scheduling and cancellation",
-    "import duplication guard",
-    "password confirmation",
-    "HTML report export",
-    "mobile page width"
-  ]
+  "data": "2026-09-30",
+  "rotas": [
+    {
+      "route": "#catalog",
+      "heading": "Catálogo de telas"
+    },
+    {
+      "route": "#sales",
+      "heading": "Minhas vendas"
+    },
+    {
+      "route": "#login",
+      "heading": "Acesso ao Movisitas"
+    },
+    {
+      "route": "#recovery",
+      "heading": "Recuperar acesso"
+    },
+    {
+      "route": "#dashboard",
+      "heading": "Dashboard"
+    },
+    {
+      "route": "#day",
+      "heading": "Meu dia"
+    },
+    {
+      "route": "#agenda",
+      "heading": "Agenda de visitas"
+    },
+    {
+      "route": "#schedule",
+      "heading": "Agendar visita"
+    },
+    {
+      "route": "#clients",
+      "heading": "Clientes"
+    },
+    {
+      "route": "#client",
+      "heading": "Detalhes do cliente"
+    },
+    {
+      "route": "#client-form",
+      "heading": "Cadastro de cliente"
+    },
+    {
+      "route": "#portfolios",
+      "heading": "Carteiras comerciais"
+    },
+    {
+      "route": "#transfer",
+      "heading": "Transferir cliente"
+    },
+    {
+      "route": "#sellers",
+      "heading": "Equipe comercial"
+    },
+    {
+      "route": "#visits",
+      "heading": "Visitas"
+    },
+    {
+      "route": "#checkin",
+      "heading": "Iniciar atendimento"
+    },
+    {
+      "route": "#checkout",
+      "heading": "Concluir atendimento"
+    },
+    {
+      "route": "#map",
+      "heading": "Localização e rota"
+    },
+    {
+      "route": "#orders",
+      "heading": "Pedidos e vendas"
+    },
+    {
+      "route": "#import",
+      "heading": "Importar pedidos"
+    },
+    {
+      "route": "#users",
+      "heading": "Usuários e permissões"
+    },
+    {
+      "route": "#user-form",
+      "heading": "Cadastro de usuário"
+    },
+    {
+      "route": "#password",
+      "heading": "Alterar minha senha"
+    },
+    {
+      "route": "#reports",
+      "heading": "Relatório comercial"
+    }
+  ],
+  "verificacoes": [
+    "24 rotas renderizadas e capturadas",
+    "Filtro Nunca atendidos retorna Empório Jardim",
+    "Filtro de vendas Agosto retorna estado vazio",
+    "Agenda móvel vendedor em 390x844 conferida visualmente"
+  ],
+  "dados": "Fictícios; sem conexão com banco de produção"
 }
