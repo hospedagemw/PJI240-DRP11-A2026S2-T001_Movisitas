@@ -10,7 +10,7 @@ Centralizar clientes, agendas, vendedores e históricos de atendimento para melh
 
 ## Situação atual
 
-**Fase 2: modelagem e documentação do banco de dados.** Este repositório ainda não contém uma aplicação executável. A migração do projeto Visitas será feita em entregas progressivas, com revisão e validação de cada módulo.
+**Documentação das fases 1 e 2, com complemento de ideação: mapa mental.** Este repositório ainda não contém uma aplicação executável. A migração do projeto Visitas será feita em entregas progressivas, com revisão e validação de cada módulo.
 
 O código de origem já existia antes desta migração. Os commits deste repositório registrarão sua incorporação e adaptação ao projeto acadêmico, além dos novos desenvolvimentos realizados pelo grupo.
 
@@ -50,6 +50,14 @@ O esquema foi reconstruído dos scripts locais. Não houve inspeção do banco r
 ## Próxima entrega
 
 Preparar a fundação Flutter com dados fictícios e detalhar os ajustes do banco necessários à solução inicial. A cada entrega, atualizar este README com o conteúdo incorporado, a branch, as verificações realizadas e as pendências.
+
+## Mapa mental — ideação
+
+![Mapa mental do Movisitas: acesso, clientes, agenda, atendimento, gestão e tecnologia.](Documentos/Mapa_Mental/mapa-mental-movisitas.png)
+
+O mapa organiza o escopo planejado e apoia a etapa de ideação do relatório. Consulte a [documentação do mapa mental](Documentos/Mapa_Mental/README.md), com descrição acessível, texto de apoio e versões SVG e Mermaid editáveis. A figura não representa validação de funcionalidades já implantadas.
+
+Entrega complementar em `codex/mapa-mental-ideacao`, preparada em 30/09/2026. A próxima fase numerada continua sendo a fundação da aplicação.
 
 ## Organização
 
