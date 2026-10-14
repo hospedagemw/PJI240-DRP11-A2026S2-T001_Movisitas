@@ -71,3 +71,7 @@ Complemento documental de ideação em `codex/mapa-mental-ideacao`: [mapa mental
 Entrega complementar em `codex/prototipacao-telas`, baseada na branch do mapa mental. O [protótipo navegável](Prototipacao/README.md) apresenta 23 telas e fluxos, com dados fictícios, descrição funcional, galeria de imagens e fontes consultadas. Foram verificados os principais fluxos simulados e a apresentação em computador e celular.
 
 A entrega representa a experiência proposta e não a migração Flutter ou a implantação do banco. O grupo poderá usar as jornadas para coletar sugestões da comunidade e priorizar a solução inicial; essa validação em campo ainda não foi realizada.
+
+## Atualização de 14/10/2026 — fundação do banco
+
+Aplicadas profiles e clients no Supabase acadêmico, com três clientes fictícios, RLS e testes de bloqueio. [Detalhes](Banco_de_Dados/07_IMPLEMENTACAO_ACADEMICA.md). As demais entidades e políticas serão implementadas por módulo. Importação de relatório de comissão apenas gravará pedidos, sem cálculo.

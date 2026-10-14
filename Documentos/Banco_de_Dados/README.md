@@ -27,3 +27,7 @@ Este conjunto descreve o banco do projeto Visitas usado como base da migração 
 - Diagramas em Mermaid ficam versionados junto com o texto. Os nomes conceituais em português correspondem aos identificadores físicos em inglês.
 
 As análises não afirmam que todos os controles descritos estão implementados: fatos dos scripts, comportamento da aplicação e propostas são identificados separadamente.
+
+## Implementação iniciada em 14/10/2026
+
+Consulte [o estado efetivamente aplicado no ambiente acadêmico](07_IMPLEMENTACAO_ACADEMICA.md). A análise anterior continua sendo a reconstrução documental da origem; não representa integralmente o banco acadêmico atual.
