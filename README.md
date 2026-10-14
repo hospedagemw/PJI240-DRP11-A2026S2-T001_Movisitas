@@ -49,7 +49,7 @@ O esquema foi reconstruído dos scripts locais. Não houve inspeção do banco r
 
 ## Próxima entrega
 
-Preparar a fundação Flutter com dados fictícios e detalhar os ajustes do banco necessários à solução inicial. A cada entrega, atualizar este README com o conteúdo incorporado, a branch, as verificações realizadas e as pendências.
+Implementar autenticação e perfis, seguindo para os cadastros e visitas em branches próprias. A cada entrega, atualizar este README com o conteúdo incorporado, a branch, as verificações realizadas e as pendências.
 
 ## Mapa mental — ideação
 
@@ -80,3 +80,16 @@ Nesta etapa, `Documentos/` reúne o planejamento e os materiais acadêmicos. Nas
 Cada entrega será preparada em uma branch, validada e enviada para revisão por Pull Request. A incorporação à `main` representa a aceitação daquela entrega. A branch da primeira fase é `fase-1/estrutura-inicial`.
 
 As datas e os responsáveis acadêmicos seguem o plano de ação do grupo. O envio de arquivos ao GitHub não substitui a entrega exigida no AVA.
+
+## Implementação — estrutura e menu principal (14/10/2026)
+
+A branch `codex/fase-3-menu-principal` inicia a aplicação Flutter para web. O menu responsivo permite navegar entre Início, Clientes, Usuários, Visitas e Importação. A página inicial apresenta três visitas fictícias; os outros módulos exibem seu escopo para as próximas entregas.
+
+Execute na raiz:
+
+```sh
+flutter pub get
+flutter run -d chrome
+```
+
+Consulte [a documentação da etapa e o roteiro para vídeo](Documentos/MENU_PRINCIPAL.md). Não há conexão com banco ou autenticação nesta entrega. A futura importação lerá o relatório de comissão e gravará os pedidos, sem cálculo de comissão.
