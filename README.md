@@ -80,3 +80,9 @@ Nesta etapa, `Documentos/` reúne o planejamento e os materiais acadêmicos. Nas
 Cada entrega será preparada em uma branch, validada e enviada para revisão por Pull Request. A incorporação à `main` representa a aceitação daquela entrega. A branch da primeira fase é `fase-1/estrutura-inicial`.
 
 As datas e os responsáveis acadêmicos seguem o plano de ação do grupo. O envio de arquivos ao GitHub não substitui a entrega exigida no AVA.
+
+## Banco acadêmico — primeira implementação (14/10/2026)
+
+Aplicadas no Supabase acadêmico as tabelas de perfis e clientes, com RLS ativo, acesso da aplicação bloqueado nesta etapa e três clientes fictícios. Os testes de integridade e bloqueios passaram; a carga repetida não duplicou dados. O login e a conexão Flutter serão implementados depois.
+
+[Scripts, decisões e resultados da implementação](Documentos/Banco_de_Dados/07_IMPLEMENTACAO_ACADEMICA.md). Branch: `codex/banco-fundacao-academica`. O modelo completo documentado anteriormente permanece como referência de evolução; somente duas tabelas da aplicação estão implementadas nesta entrega.
