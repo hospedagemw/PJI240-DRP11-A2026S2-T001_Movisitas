@@ -59,4 +59,4 @@ Os testes de widgets verificam os quatro destinos, o retorno ao início e a aus�
 
 Cada funcionalidade terá sua própria branch, documentação e validação: autenticação/perfis, clientes, usuários, visitas e importação do relatório de comissão. A incorporação à main ocorrerá após revisão da respectiva entrega.
 
-Resultado em 14/10/2026: análise sem apontamentos, dois testes aprovados e compilação web concluída. O compilador emitiu um aviso sobre a fonte CupertinoIcons; esta entrega utiliza apenas MaterialIcons. A inspeção visual em navegador e a validação com usuários ficam pendentes.
+Resultado em 14/10/2026: análise sem apontamentos, dois testes aprovados e compilação web concluída. O compilador emitiu um aviso sobre a fonte CupertinoIcons; esta entrega utiliza apenas MaterialIcons. Inspeção visual realizada no site público em 16/10/2026: tela inicial, abertura de Clientes e retorno ao início conferidos. A validação com usuários permanece pendente. Consulte o [registro de publicação no Cloudflare](DEPLOY_CLOUDFLARE.md).
