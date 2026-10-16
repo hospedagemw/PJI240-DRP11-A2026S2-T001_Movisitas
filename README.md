@@ -10,7 +10,7 @@ Centralizar clientes, agendas, vendedores e históricos de atendimento para melh
 
 ## Situação atual
 
-**Documentação das fases 1 e 2, mapa mental e protótipo navegável das telas.** Este repositório ainda não contém a aplicação Flutter migrada; o protótipo HTML demonstra a experiência com dados fictícios. A migração do projeto Visitas será feita em entregas progressivas, com revisão e validação de cada módulo.
+**Documentação, protótipo e fundação Flutter com menu principal.** A versão acadêmica está disponível em [movisitas-academico.pages.dev](https://movisitas-academico.pages.dev/), com dados fictícios e módulos em preparação. A migração continua em entregas progressivas, com revisão e validação de cada módulo. Consulte o [guia de publicação no Cloudflare](Documentos/DEPLOY_CLOUDFLARE.md).
 
 O código de origem já existia antes desta migração. Os commits deste repositório registrarão sua incorporação e adaptação ao projeto acadêmico, além dos novos desenvolvimentos realizados pelo grupo.
 
@@ -28,7 +28,7 @@ O código de origem já existia antes desta migração. Os commits deste reposit
 | --- | --- | --- | --- |
 | 1 — Estrutura inicial | `fase-1/estrutura-inicial` | Apresentação, escopo e planejamento; commit `30882fd` | Integrada à main pelo PR #1 |
 | 2 — Modelagem do banco | `fase-2/modelagem-banco` | MER, DER, dicionário, análise de integridade e Supabase; commit `3e3d17b` | Entrega documental do PR #2; validação do banco remoto pendente |
-| 3 — Fundação da aplicação | A criar | Estrutura Flutter, identidade e navegação | Planejada |
+| 3 — Fundação da aplicação | `codex/fase-3-menu-principal` | Estrutura Flutter, identidade e menu; commit `680843c` | Publicada para demonstração; PR #5 em revisão |
 | 4 — Solução inicial | A criar | Clientes, vendedores, agenda, visitas e integração com o banco | Planejada |
 | 5 a 7 — Melhorias, validação e entrega final | A criar | Evolução conforme retorno da comunidade, testes e materiais acadêmicos | Planejadas |
 
@@ -69,11 +69,11 @@ A entrega inclui **24 telas e fluxos navegáveis**, descrição de cada funciona
 
 ![Prévia da visão comercial](Documentos/Prototipacao/preview-desktop.png)
 
-Branch: `codex/prototipacao-telas`, criada a partir de `codex/mapa-mental-ideacao` para preservar a entrega anterior. Protótipo testado em computador e celular, sem conexão com o banco. As simulações não substituem os testes da aplicação nem a validação pela comunidade. A fundação Flutter permanece como próxima fase de implementação.
+Branch: `codex/prototipacao-telas`, criada a partir de `codex/mapa-mental-ideacao` para preservar a entrega anterior. Protótipo testado em computador e celular, sem conexão com o banco. As simulações não substituem os testes da aplicação nem a validação pela comunidade. A fundação Flutter está descrita na seção de implementação abaixo.
 
 ## Organização
 
-Nesta etapa, `Documentos/` reúne o planejamento e os materiais acadêmicos. Nas próximas entregas, a aplicação Flutter ocupará a raiz do repositório, com `lib/`, `web/`, `assets/` e `test/`. Os scripts de evolução do banco ficarão em `supabase/migrations/`.
+Nesta etapa, `Documentos/` reúne o planejamento e os materiais acadêmicos. A aplicação Flutter ocupa a raiz do repositório, com `lib/`, `web/` e `test/`. Os scripts de evolução do banco ficarão em `supabase/migrations/`.
 
 ## Fluxo de trabalho
 
