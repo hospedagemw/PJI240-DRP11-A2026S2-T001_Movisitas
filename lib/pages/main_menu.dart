@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../data/demo_data.dart';
+import '../data/demo_store.dart';
+import 'demo_panel.dart';
 
 const menuItems = <({String title, IconData icon, String description})>[
   (
@@ -31,13 +33,17 @@ const menuItems = <({String title, IconData icon, String description})>[
 ];
 
 class MainMenu extends StatefulWidget {
-  const MainMenu({super.key});
+  const MainMenu({super.key, this.demoStore});
+  final DemoStore? demoStore;
   @override
   State<MainMenu> createState() => _MainMenuState();
 }
 
 class _MainMenuState extends State<MainMenu> {
   int selected = 0;
+  late final Future<DemoStore> demo = widget.demoStore == null
+      ? DemoStore.load()
+      : Future.value(widget.demoStore!);
 
   @override
   Widget build(BuildContext context) => LayoutBuilder(
@@ -55,7 +61,7 @@ class _MainMenuState extends State<MainMenu> {
                 builder: (context) => AlertDialog(
                   title: const Text('Ambiente demonstrativo'),
                   content: const Text(
-                    'Todos os dados são fictícios. Esta etapa implementa o menu principal. Não há conexão com banco de dados ou autenticação.',
+                    'Todos os dados são fictícios. Usuários, clientes, visitas e vendas são exemplos para apresentação. Não há conexão com banco de dados ou autenticação.',
                   ),
                   actions: [
                     TextButton(
@@ -179,35 +185,16 @@ class _MainMenuState extends State<MainMenu> {
                       ),
                     const SizedBox(height: 16),
                     const Text(
-                      'Use o menu para conhecer os módulos previstos. Os cadastros serão implementados nas próximas entregas.',
+                      'Use o menu para consultar clientes, usuários, visitas e importar vendas fictícias.',
                     ),
-                  ] else
-                    Card(
-                      child: Padding(
-                        padding: const EdgeInsets.all(24),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Icon(
-                              menuItems[selected].icon,
-                              size: 40,
-                              color: Theme.of(context).colorScheme.primary,
-                            ),
-                            const SizedBox(height: 16),
-                            Text(menuItems[selected].description),
-                            const SizedBox(height: 16),
-                            const Text(
-                              'Implementação prevista para a próxima etapa deste módulo.',
-                            ),
-                            const SizedBox(height: 16),
-                            OutlinedButton(
-                              onPressed: () => setState(() => selected = 0),
-                              child: const Text('Voltar ao início'),
-                            ),
-                          ],
-                        ),
-                      ),
+                  ] else ...[
+                    DemoPanel(section: selected, store: demo),
+                    const SizedBox(height: 16),
+                    OutlinedButton(
+                      onPressed: () => setState(() => selected = 0),
+                      child: const Text('Voltar ao início'),
                     ),
+                  ],
                 ],
               ),
             ),

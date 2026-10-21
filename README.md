@@ -10,7 +10,7 @@ Centralizar clientes, agendas, vendedores e históricos de atendimento para melh
 
 ## Situação atual
 
-**Documentação, protótipo e fundação Flutter com menu principal.** A versão acadêmica está disponível em [movisitas-academico.pages.dev](https://movisitas-academico.pages.dev/), com dados fictícios e módulos em preparação. A migração continua em entregas progressivas, com revisão e validação de cada módulo. Consulte o [guia de publicação no Cloudflare](Documentos/DEPLOY_CLOUDFLARE.md).
+**Documentação, protótipo e aplicação demonstrativa com usuários, clientes, visitas e vendas fictícias.** A versão acadêmica está disponível em [movisitas-academico.pages.dev](https://movisitas-academico.pages.dev/), com dados fictícios e módulos em preparação. A migração continua em entregas progressivas, com revisão e validação de cada módulo. Consulte o [guia de publicação no Cloudflare](Documentos/DEPLOY_CLOUDFLARE.md).
 
 O código de origem já existia antes desta migração. Os commits deste repositório registrarão sua incorporação e adaptação ao projeto acadêmico, além dos novos desenvolvimentos realizados pelo grupo.
 
@@ -93,3 +93,9 @@ flutter run -d chrome
 ```
 
 Consulte [a documentação da etapa e o roteiro para vídeo](Documentos/MENU_PRINCIPAL.md). Não há conexão com banco ou autenticação nesta entrega. A futura importação lerá o relatório de comissão e gravará os pedidos, sem cálculo de comissão.
+
+## Dados fictícios e vendas — 21/10/2026
+
+A demonstração apresenta 5 usuários sem login, 6 clientes e 12 visitas. O HTML de vendas contém 18 pedidos, totalizando R$ 43.508,25, sem cálculo de comissão. A tela importa o exemplo em memória e evita duplicações; o Supabase acadêmico guarda uma carga independente em schema isolado, sem sincronização com a tela.
+
+Consulte o [guia da demonstração e carga do banco](Documentos/DADOS_FICTICIOS.md) e o [HTML fictício de vendas](web/exemplos/vendas-ficticias.html).

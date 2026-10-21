@@ -38,3 +38,9 @@ Não incluir arquivos `.env`, credenciais, dados profissionais ou arquivos de tr
 - Autenticação, integração com banco e validação com usuários permanecem para as próximas entregas.
 
 Consulte [a implementação do menu](MENU_PRINCIPAL.md) para os limites e o roteiro de apresentação.
+
+## Atualização de 21/10/2026
+
+Publicada a branch `codex/dados-ficticios-importacao`, com consultas de usuários, clientes, visitas e pedidos fictícios, download do relatório HTML e importação local sem duplicação. Cloudflare confirmou o envio de 41 arquivos e a implantação concluída. O HTML está disponível em https://movisitas-academico.pages.dev/exemplos/vendas-ficticias.html.
+
+O Supabase acadêmico recebeu uma carga independente no schema `academic_demo`, sem acesso público nem conexão automática com o navegador. Consulte [dados fictícios e limitações](DADOS_FICTICIOS.md).

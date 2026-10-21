@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'dart:convert';
+import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:movisitas/app.dart';
+import 'package:movisitas/pages/main_menu.dart';
+import 'package:movisitas/data/demo_store.dart';
 
 void main() {
   for (final width in [390.0, 1280.0]) {
@@ -9,7 +12,8 @@ void main() {
       tester.view.devicePixelRatio = 1;
       addTearDown(tester.view.resetPhysicalSize);
       addTearDown(tester.view.resetDevicePixelRatio);
-      await tester.pumpWidget(const MovisitasApp());
+      final store = DemoStore(jsonDecode(File('assets/demo.json').readAsStringSync()) as Map<String, dynamic>);
+      await tester.pumpWidget(MaterialApp(home: MainMenu(demoStore: store)));
       expect(find.text('Mercado Horizonte'), findsOneWidget);
       expect(
         find.byType(width < 800 ? NavigationBar : NavigationRail),
@@ -18,13 +22,9 @@ void main() {
       for (final label in ['Clientes', 'Usuários', 'Visitas', 'Importação']) {
         await tester.tap(find.text(label).first);
         await tester.pumpAndSettle();
-        expect(
-          find.text(
-            'Implementação prevista para a próxima etapa deste módulo.',
-          ),
-          findsOneWidget,
-        );
+        expect(find.text(label), findsWidgets);
         expect(tester.takeException(), isNull);
+        await tester.scrollUntilVisible(find.text('Voltar ao início'), 500, scrollable: find.byType(Scrollable).last);
         await tester.tap(find.text('Voltar ao início'));
         await tester.pumpAndSettle();
         expect(find.text('Mercado Horizonte'), findsOneWidget);
