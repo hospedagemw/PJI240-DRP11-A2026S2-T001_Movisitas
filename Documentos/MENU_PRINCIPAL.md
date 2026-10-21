@@ -1,5 +1,7 @@
 # Fase 3 — Estrutura e menu principal
 
+> Registro histórico da primeira entrega. Para a versão atual e a apresentação, consulte o [guia do sistema e roteiro de vídeo](GUIA_E_ROTEIRO_VIDEO.md).
+
 Entrega de 14/10/2026, branch `codex/fase-3-menu-principal`.
 
 ## Implementado
