@@ -1,0 +1,304 @@
+{
+  "users": [
+    {
+      "id": "U001",
+      "name": "Ana Exemplo",
+      "role": "Administradora",
+      "email": "usuario1@example.com"
+    },
+    {
+      "id": "U002",
+      "name": "Bruno Modelo",
+      "role": "Gestor",
+      "email": "usuario2@example.com"
+    },
+    {
+      "id": "U003",
+      "name": "Carla Demonstração",
+      "role": "Vendedora",
+      "email": "usuario3@example.com"
+    },
+    {
+      "id": "U004",
+      "name": "Diego Exemplo",
+      "role": "Vendedor",
+      "email": "usuario4@example.com"
+    },
+    {
+      "id": "U005",
+      "name": "Elisa Modelo",
+      "role": "Vendedora",
+      "email": "usuario5@example.com"
+    }
+  ],
+  "clients": [
+    {
+      "id": "C001",
+      "code": "900001",
+      "name": "Mercado Horizonte",
+      "city": "Cidade Exemplo",
+      "email": "cliente1@example.com",
+      "seller": "U003"
+    },
+    {
+      "id": "C002",
+      "code": "900002",
+      "name": "Empório Jardim",
+      "city": "Cidade Exemplo",
+      "email": "cliente2@example.com",
+      "seller": "U004"
+    },
+    {
+      "id": "C003",
+      "code": "900003",
+      "name": "Distribuidora Aurora",
+      "city": "Vila Modelo",
+      "email": "cliente3@example.com",
+      "seller": "U005"
+    },
+    {
+      "id": "C004",
+      "code": "900004",
+      "name": "Loja Estrela",
+      "city": "Vila Modelo",
+      "email": "cliente4@example.com",
+      "seller": "U003"
+    },
+    {
+      "id": "C005",
+      "code": "900005",
+      "name": "Comercial Primavera",
+      "city": "Cidade Ilustração",
+      "email": "cliente5@example.com",
+      "seller": "U004"
+    },
+    {
+      "id": "C006",
+      "code": "900006",
+      "name": "Armazém das Nuvens",
+      "city": "Cidade Ilustração",
+      "email": "cliente6@example.com",
+      "seller": "U005"
+    }
+  ],
+  "visits": [
+    {
+      "id": "V001",
+      "client": "C001",
+      "user": "U003",
+      "date": "2026-10-19",
+      "time": "09:00",
+      "status": "Concluída",
+      "notes": "Apresentação fictícia do catálogo."
+    },
+    {
+      "id": "V002",
+      "client": "C002",
+      "user": "U004",
+      "date": "2026-10-19",
+      "time": "11:00",
+      "status": "Agendada",
+      "notes": "Revisão fictícia de necessidades."
+    },
+    {
+      "id": "V003",
+      "client": "C003",
+      "user": "U005",
+      "date": "2026-10-19",
+      "time": "14:30",
+      "status": "Cancelada",
+      "notes": "Reagendamento demonstrativo."
+    },
+    {
+      "id": "V004",
+      "client": "C004",
+      "user": "U003",
+      "date": "2026-10-20",
+      "time": "09:00",
+      "status": "Concluída",
+      "notes": "Apresentação fictícia do catálogo."
+    },
+    {
+      "id": "V005",
+      "client": "C005",
+      "user": "U004",
+      "date": "2026-10-20",
+      "time": "11:00",
+      "status": "Agendada",
+      "notes": "Revisão fictícia de necessidades."
+    },
+    {
+      "id": "V006",
+      "client": "C006",
+      "user": "U005",
+      "date": "2026-10-20",
+      "time": "14:30",
+      "status": "Cancelada",
+      "notes": "Reagendamento demonstrativo."
+    },
+    {
+      "id": "V007",
+      "client": "C001",
+      "user": "U003",
+      "date": "2026-10-21",
+      "time": "09:00",
+      "status": "Concluída",
+      "notes": "Apresentação fictícia do catálogo."
+    },
+    {
+      "id": "V008",
+      "client": "C002",
+      "user": "U004",
+      "date": "2026-10-21",
+      "time": "11:00",
+      "status": "Agendada",
+      "notes": "Revisão fictícia de necessidades."
+    },
+    {
+      "id": "V009",
+      "client": "C003",
+      "user": "U005",
+      "date": "2026-10-21",
+      "time": "14:30",
+      "status": "Cancelada",
+      "notes": "Reagendamento demonstrativo."
+    },
+    {
+      "id": "V010",
+      "client": "C004",
+      "user": "U003",
+      "date": "2026-10-22",
+      "time": "09:00",
+      "status": "Concluída",
+      "notes": "Apresentação fictícia do catálogo."
+    },
+    {
+      "id": "V011",
+      "client": "C005",
+      "user": "U004",
+      "date": "2026-10-22",
+      "time": "11:00",
+      "status": "Agendada",
+      "notes": "Revisão fictícia de necessidades."
+    },
+    {
+      "id": "V012",
+      "client": "C006",
+      "user": "U005",
+      "date": "2026-10-22",
+      "time": "14:30",
+      "status": "Cancelada",
+      "notes": "Reagendamento demonstrativo."
+    }
+  ],
+  "orders": [
+    {
+      "id": "DEMO-0001",
+      "client": "C001",
+      "date": "2026-10-01",
+      "cents": 125050
+    },
+    {
+      "id": "DEMO-0002",
+      "client": "C002",
+      "date": "2026-10-02",
+      "cents": 138775
+    },
+    {
+      "id": "DEMO-0003",
+      "client": "C003",
+      "date": "2026-10-03",
+      "cents": 152500
+    },
+    {
+      "id": "DEMO-0004",
+      "client": "C004",
+      "date": "2026-10-04",
+      "cents": 166225
+    },
+    {
+      "id": "DEMO-0005",
+      "client": "C005",
+      "date": "2026-10-05",
+      "cents": 179950
+    },
+    {
+      "id": "DEMO-0006",
+      "client": "C006",
+      "date": "2026-10-06",
+      "cents": 193675
+    },
+    {
+      "id": "DEMO-0007",
+      "client": "C001",
+      "date": "2026-10-07",
+      "cents": 207400
+    },
+    {
+      "id": "DEMO-0008",
+      "client": "C002",
+      "date": "2026-10-08",
+      "cents": 221125
+    },
+    {
+      "id": "DEMO-0009",
+      "client": "C003",
+      "date": "2026-10-09",
+      "cents": 234850
+    },
+    {
+      "id": "DEMO-0010",
+      "client": "C004",
+      "date": "2026-10-10",
+      "cents": 248575
+    },
+    {
+      "id": "DEMO-0011",
+      "client": "C005",
+      "date": "2026-10-11",
+      "cents": 262300
+    },
+    {
+      "id": "DEMO-0012",
+      "client": "C006",
+      "date": "2026-10-12",
+      "cents": 276025
+    },
+    {
+      "id": "DEMO-0013",
+      "client": "C001",
+      "date": "2026-10-13",
+      "cents": 289750
+    },
+    {
+      "id": "DEMO-0014",
+      "client": "C002",
+      "date": "2026-10-14",
+      "cents": 303475
+    },
+    {
+      "id": "DEMO-0015",
+      "client": "C003",
+      "date": "2026-10-15",
+      "cents": 317200
+    },
+    {
+      "id": "DEMO-0016",
+      "client": "C004",
+      "date": "2026-10-16",
+      "cents": 330925
+    },
+    {
+      "id": "DEMO-0017",
+      "client": "C005",
+      "date": "2026-10-17",
+      "cents": 344650
+    },
+    {
+      "id": "DEMO-0018",
+      "client": "C006",
+      "date": "2026-10-18",
+      "cents": 358375
+    }
+  ]
+}
