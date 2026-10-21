@@ -16,6 +16,8 @@ O código de origem já existia antes desta migração. Os commits deste reposit
 
 ## Documentação
 
+- [Guia do sistema e roteiro falado para vídeo](Documentos/GUIA_E_ROTEIRO_VIDEO.md)
+
 - [Plano de ação do grupo](Documentos/Plano_de_acao-PJI240-DRP11-A2026S2-Grupo_17.pdf)
 - [Orientações da disciplina](Documentos/PI.txt)
 - [Plano de migração por fases](Documentos/PLANO_DE_MIGRACAO.md)
@@ -34,7 +36,9 @@ O código de origem já existia antes desta migração. Os commits deste reposit
 
 A fase 2 parte da entrega da fase 1 e inclui seus arquivos. A numeração identifica as entregas técnicas e não corresponde diretamente às quinzenas da faculdade. Consulte os períodos no [plano de migração](Documentos/PLANO_DE_MIGRACAO.md).
 
-## Documentação do banco
+## Documentação
+
+- [Guia do sistema e roteiro falado para vídeo](Documentos/GUIA_E_ROTEIRO_VIDEO.md) do banco
 
 A análise abrange **13 migrations, 8 tabelas da aplicação e 75 colunas** do projeto de origem:
 
