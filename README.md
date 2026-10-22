@@ -101,3 +101,7 @@ Consulte [a documentação da etapa e o roteiro para vídeo](Documentos/MENU_PRI
 A demonstração apresenta 5 usuários sem login, 6 clientes e 12 visitas. O HTML de vendas contém 18 pedidos, totalizando R$ 43.508,25, sem cálculo de comissão. A tela importa o exemplo em memória e evita duplicações; o Supabase acadêmico guarda uma carga independente em schema isolado, sem sincronização com a tela.
 
 Consulte o [guia da demonstração e carga do banco](Documentos/DADOS_FICTICIOS.md) e o [HTML fictício de vendas](web/exemplos/vendas-ficticias.html).
+
+## Painel comercial — 22/10/2026
+
+Página inicial modernizada com filtros de período e responsável, cartões da carteira, panorama de visitas e acompanhamento da equipe. Consulte [funcionalidades e critérios dos indicadores](Documentos/PAINEL_COMERCIAL.md). Branch: codex/painel-comercial.
