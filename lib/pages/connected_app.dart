@@ -3,6 +3,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'main_menu.dart';
 import 'client_contact.dart';
+import 'commercial_dashboard.dart';
 
 typedef RowData = Map<String, dynamic>;
 SupabaseClient get backend => Supabase.instance.client;
@@ -480,52 +481,18 @@ class _ConnectedHomeState extends State<ConnectedHome> {
         ...visits.map(visitCard),
       ];
     }
-    final pending =
-        visits
-            .where(
-              (v) => v['status'] == 'agendada' || v['status'] == 'em_andamento',
-            )
-            .toList()
-          ..sort(
-            (a, b) => (a['scheduled_at'] as String).compareTo(
-              b['scheduled_at'] as String,
-            ),
-          );
     return [
-      Text(
-        'Olá, ${profile?['full_name']}',
-        style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+      CommercialDashboard(
+        clients: clients,
+        visits: visits,
+        users: users,
+        name: profile?['full_name'] as String? ?? '',
+        admin: admin,
+        openClients: () => setState(() => selected = 1),
+        openVisits: () => setState(() => selected = 3),
+        visitCard: visitCard,
       ),
       const SizedBox(height: 16),
-      Wrap(
-        spacing: 12,
-        runSpacing: 12,
-        children: [
-          Chip(label: Text('${clients.length} clientes')),
-          Chip(
-            label: Text(
-              '${visits.where((v) => v['status'] == 'agendada').length} agendadas',
-            ),
-          ),
-          Chip(
-            label: Text(
-              '${visits.where((v) => v['status'] == 'em_andamento').length} em andamento',
-            ),
-          ),
-          Chip(
-            label: Text(
-              '${visits.where((v) => v['status'] == 'concluida').length} concluídas',
-            ),
-          ),
-        ],
-      ),
-      const SizedBox(height: 16),
-      Text(
-        'Próximos atendimentos',
-        style: Theme.of(context).textTheme.titleLarge,
-      ),
-      if (pending.isEmpty) const Text('Sem atendimentos pendentes.'),
-      ...pending.take(6).map(visitCard),
       TextButton(
         onPressed: () => Navigator.push(
           context,
