@@ -1,5 +1,7 @@
 # Guia do sistema e roteiro de vídeo
 
+> Atualização de 22/10/2026: login, cadastro/edição de clientes e ciclo de visitas agora têm integração com o Supabase. Para gravar a versão atual, siga o [roteiro de clientes, visitas e autenticação](CLIENTES_VISITAS_AUTENTICACAO.md#roteiro-para-demonstração). O conteúdo abaixo preserva o roteiro da demonstração anterior, acessível pela opção “Ver demonstração sem login”.
+
 Referência: versão demonstrativa publicada em 21/10/2026, código `9c0370e`. Duração sugerida: 5 a 7 minutos; adaptar ao limite exigido pela disciplina. Este roteiro não substitui as orientações do AVA.
 
 ## O que está funcionando nesta versão

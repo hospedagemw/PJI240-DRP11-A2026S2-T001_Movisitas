@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'dart:convert';
 import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:movisitas/pages/main_menu.dart';
 import 'package:movisitas/data/demo_store.dart';
@@ -12,7 +14,10 @@ void main() {
       tester.view.devicePixelRatio = 1;
       addTearDown(tester.view.resetPhysicalSize);
       addTearDown(tester.view.resetDevicePixelRatio);
-      final store = DemoStore(jsonDecode(File('assets/demo.json').readAsStringSync()) as Map<String, dynamic>);
+      final store = DemoStore(
+        jsonDecode(File('assets/demo.json').readAsStringSync())
+            as Map<String, dynamic>,
+      );
       await tester.pumpWidget(MaterialApp(home: MainMenu(demoStore: store)));
       expect(find.text('Mercado Horizonte'), findsOneWidget);
       expect(
@@ -24,7 +29,11 @@ void main() {
         await tester.pumpAndSettle();
         expect(find.text(label), findsWidgets);
         expect(tester.takeException(), isNull);
-        await tester.scrollUntilVisible(find.text('Voltar ao início'), 500, scrollable: find.byType(Scrollable).last);
+        await tester.scrollUntilVisible(
+          find.text('Voltar ao início'),
+          500,
+          scrollable: find.byType(Scrollable).last,
+        );
         await tester.tap(find.text('Voltar ao início'));
         await tester.pumpAndSettle();
         expect(find.text('Mercado Horizonte'), findsOneWidget);

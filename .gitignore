@@ -121,3 +121,8 @@ app.*.symbols
 !pubspec.lock
 .idea/
 *.iml
+
+# Configuração local de execução
+config.local.json
+.env
+.env.*

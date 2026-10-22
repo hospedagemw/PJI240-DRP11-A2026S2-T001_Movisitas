@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'pages/main_menu.dart';
+import 'pages/connected_app.dart';
 
 class MovisitasApp extends StatelessWidget {
-  const MovisitasApp({super.key});
+  const MovisitasApp({super.key, this.connected = false});
+  final bool connected;
 
   @override
   Widget build(BuildContext context) => MaterialApp(
@@ -22,6 +24,6 @@ class MovisitasApp extends StatelessWidget {
       scaffoldBackgroundColor: const Color(0xFFF7F7F8),
       appBarTheme: const AppBarTheme(backgroundColor: Colors.white),
     ),
-    home: const MainMenu(),
+    home: connected ? const AuthGate() : const MainMenu(),
   );
 }

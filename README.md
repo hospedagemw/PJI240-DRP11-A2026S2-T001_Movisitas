@@ -10,7 +10,7 @@ Centralizar clientes, agendas, vendedores e históricos de atendimento para melh
 
 ## Situação atual
 
-**Documentação, protótipo e aplicação demonstrativa com usuários, clientes, visitas e vendas fictícias.** A versão acadêmica está disponível em [movisitas-academico.pages.dev](https://movisitas-academico.pages.dev/), com dados fictícios e módulos em preparação. A migração continua em entregas progressivas, com revisão e validação de cada módulo. Consulte o [guia de publicação no Cloudflare](Documentos/DEPLOY_CLOUDFLARE.md).
+**Aplicação acadêmica com login, clientes e visitas integrados ao Supabase**, além da demonstração de importação com dados fictícios. Endereço: [movisitas-academico.pages.dev](https://movisitas-academico.pages.dev/). A entrega de 22/10/2026 inclui os perfis administrador e vendedor, cadastro e edição de clientes, contato/WhatsApp e ciclo de visitas. Consulte [funcionalidades, permissões e roteiro atualizado](Documentos/CLIENTES_VISITAS_AUTENTICACAO.md). A importação permanece demonstrativa, sem gravação dos pedidos pelo aplicativo.
 
 O código de origem já existia antes desta migração. Os commits deste repositório registrarão sua incorporação e adaptação ao projeto acadêmico, além dos novos desenvolvimentos realizados pelo grupo.
 
@@ -31,14 +31,12 @@ O código de origem já existia antes desta migração. Os commits deste reposit
 | 1 — Estrutura inicial | `fase-1/estrutura-inicial` | Apresentação, escopo e planejamento; commit `30882fd` | Integrada à main pelo PR #1 |
 | 2 — Modelagem do banco | `fase-2/modelagem-banco` | MER, DER, dicionário, análise de integridade e Supabase; commit `3e3d17b` | Entrega documental do PR #2; validação do banco remoto pendente |
 | 3 — Fundação da aplicação | `codex/fase-3-menu-principal` | Estrutura Flutter, identidade e menu; commit `680843c` | Publicada para demonstração; PR #5 em revisão |
-| 4 — Solução inicial | A criar | Clientes, vendedores, agenda, visitas e integração com o banco | Planejada |
+| 4 — Solução inicial | `codex/clientes-visitas-autenticacao` | Login, carteira de clientes, contato/WhatsApp, perfis e visitas no Supabase | Implementação e validação em 22/10/2026 |
 | 5 a 7 — Melhorias, validação e entrega final | A criar | Evolução conforme retorno da comunidade, testes e materiais acadêmicos | Planejadas |
 
 A fase 2 parte da entrega da fase 1 e inclui seus arquivos. A numeração identifica as entregas técnicas e não corresponde diretamente às quinzenas da faculdade. Consulte os períodos no [plano de migração](Documentos/PLANO_DE_MIGRACAO.md).
 
-## Documentação
-
-- [Guia do sistema e roteiro falado para vídeo](Documentos/GUIA_E_ROTEIRO_VIDEO.md) do banco
+## Documentação do banco
 
 A análise abrange **13 migrations, 8 tabelas da aplicação e 75 colunas** do projeto de origem:
 
@@ -53,7 +51,7 @@ O esquema foi reconstruído dos scripts locais. Não houve inspeção do banco r
 
 ## Próxima entrega
 
-Implementar autenticação e perfis, seguindo para os cadastros e visitas em branches próprias. A cada entrega, atualizar este README com o conteúdo incorporado, a branch, as verificações realizadas e as pendências.
+Evoluir a administração de usuários pela interface e a importação autenticada persistente. A cada entrega, atualizar este README com o conteúdo incorporado, a branch, as verificações realizadas e as pendências.
 
 ## Mapa mental — ideação
 
