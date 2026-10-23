@@ -40,6 +40,82 @@ class _CommercialDashboardState extends State<CommercialDashboard> {
     Color(0xFF858590),
   ];
 
+  void showRecords(String label, List<DashboardRow> records, bool isClient) {
+    showDialog<void>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text('$label (${records.length})'),
+        content: SizedBox(
+          width: 640,
+          height: MediaQuery.sizeOf(ctx).height * .55,
+          child: records.isEmpty
+              ? const Center(
+                  child: Text('Nenhum registro para os filtros selecionados.'),
+                )
+              : ListView.separated(
+                  itemCount: records.length,
+                  separatorBuilder: (_, index) => const Divider(),
+                  itemBuilder: (_, index) {
+                    final row = records[index];
+                    final client = isClient
+                        ? row
+                        : widget.clients
+                              .where((c) => c['id'] == row['client_id'])
+                              .firstOrNull;
+                    final date = DateTime.tryParse(
+                      row['scheduled_at'] as String? ?? '',
+                    )?.toLocal();
+                    return ListTile(
+                      leading: Icon(
+                        isClient
+                            ? Icons.storefront_outlined
+                            : Icons.event_outlined,
+                        color: red,
+                      ),
+                      title: Text(
+                        client?['trade_name'] as String? ??
+                            'Cliente indisponível',
+                      ),
+                      subtitle: Text(
+                        isClient
+                            ? '${row['city'] ?? ''}\nContato: ${row['contact_name'] ?? 'Não informado'}'
+                            : '${date == null ? 'Sem data' : '${date.day.toString().padLeft(2, '0')}/${date.month.toString().padLeft(2, '0')}/${date.year} ${date.hour.toString().padLeft(2, '0')}:${date.minute.toString().padLeft(2, '0')}'} • ${states[row['status']] ?? ''}\n${row['notes'] ?? ''}',
+                      ),
+                    );
+                  },
+                ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Fechar'),
+          ),
+          FilledButton(
+            onPressed: () {
+              Navigator.pop(ctx);
+              isClient ? widget.openClients() : widget.openVisits();
+            },
+            child: Text(isClient ? 'Gerenciar clientes' : 'Gerenciar visitas'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget metric(Widget child, String label, VoidCallback onTap) => Semantics(
+    button: true,
+    label: 'Consultar $label',
+    child: Material(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(18),
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(18),
+        child: Padding(padding: const EdgeInsets.all(22), child: child),
+      ),
+    ),
+  );
+
   bool inPeriod(DashboardRow v) {
     final raw = v['status'] == 'concluida'
         ? v['finished_at']
@@ -197,7 +273,7 @@ class _CommercialDashboardState extends State<CommercialDashboard> {
               width: 210,
               child: DropdownButtonFormField<String>(
                 initialValue: period,
-              isExpanded: true,
+                isExpanded: true,
                 decoration: const InputDecoration(
                   labelText: 'Período das visitas',
                   border: OutlineInputBorder(),
@@ -275,7 +351,7 @@ class _CommercialDashboardState extends State<CommercialDashboard> {
                 for (var i = 0; i < 4; i++)
                   SizedBox(
                     width: (size.maxWidth - (columns - 1) * 14) / columns,
-                    child: panel(
+                    child: metric(
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -316,6 +392,24 @@ class _CommercialDashboardState extends State<CommercialDashboard> {
                             ),
                           ),
                         ],
+                      ),
+                      labels[i],
+                      () => showRecords(
+                        labels[i],
+                        i == 0
+                            ? clients
+                            : rows
+                                  .where(
+                                    (v) =>
+                                        v['status'] ==
+                                        [
+                                          'agendada',
+                                          'em_andamento',
+                                          'concluida',
+                                        ][i - 1],
+                                  )
+                                  .toList(),
+                        i == 0,
                       ),
                     ),
                   ),

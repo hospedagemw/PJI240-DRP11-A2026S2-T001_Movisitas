@@ -105,3 +105,7 @@ Consulte o [guia da demonstração e carga do banco](Documentos/DADOS_FICTICIOS.
 ## Painel comercial — 22/10/2026
 
 Página inicial modernizada com filtros de período e responsável, cartões da carteira, panorama de visitas e acompanhamento da equipe. Consulte [funcionalidades e critérios dos indicadores](Documentos/PAINEL_COMERCIAL.md). Branch: codex/painel-comercial.
+
+## Volume fictício e cartões — 23/10/2026
+
+Indicadores clicáveis com consulta dos registros filtrados, mais 24 clientes e 72 visitas fictícias. Ana Exemplo adicionada como vendedora. Veja [carga, regras e pendências](Documentos/VOLUME_E_CARTOES.md).
