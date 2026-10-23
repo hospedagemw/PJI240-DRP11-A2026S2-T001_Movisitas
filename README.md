@@ -111,3 +111,5 @@ Página inicial modernizada com filtros de período e responsável, cartões da 
 Indicadores clicáveis com consulta dos registros filtrados, mais 24 clientes e 72 visitas fictícias. Ana Exemplo adicionada como vendedora. Veja [carga, regras e pendências](Documentos/VOLUME_E_CARTOES.md).
 
 - [Acompanhamento e conclusão de visitas em andamento](Documentos/VISITAS_EM_ANDAMENTO.md)
+
+- [Administração de usuários](Documentos/USUARIOS_ADMIN.md)

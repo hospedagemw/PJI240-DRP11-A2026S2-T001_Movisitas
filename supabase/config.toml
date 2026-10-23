@@ -1,0 +1,3 @@
+[functions.admin-users]
+verify_jwt = false
+# A função verifica a sessão via auth.getUser e exige administrador ativo.
