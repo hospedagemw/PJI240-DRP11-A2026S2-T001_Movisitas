@@ -22,6 +22,18 @@ void main() {
       await tester.tap(find.text('Todo o histórico').last);
       await tester.pumpAndSettle();
       expect(find.text('1 atendimento(s) no período'), findsOneWidget);
+      await tester.ensureVisible(find.text('Visitas concluídas'));
+      await tester.tap(find.text('Visitas concluídas'));
+      await tester.pumpAndSettle();
+      expect(find.text('Visitas concluídas (1)'), findsOneWidget);
+      expect(find.text('Cliente indisponível'), findsOneWidget);
+      await tester.tap(find.text('Fechar'));
+      await tester.pumpAndSettle();
+      await tester.ensureVisible(find.text('Visitas agendadas'));
+      await tester.tap(find.text('Visitas agendadas'));
+      await tester.pumpAndSettle();
+      expect(find.text('Visitas agendadas (0)'), findsOneWidget);
+      expect(find.text('Nenhum registro para os filtros selecionados.'), findsOneWidget);
       expect(tester.takeException(), isNull);
     });
   }
