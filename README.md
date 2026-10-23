@@ -109,3 +109,5 @@ Página inicial modernizada com filtros de período e responsável, cartões da 
 ## Volume fictício e cartões — 23/10/2026
 
 Indicadores clicáveis com consulta dos registros filtrados, mais 24 clientes e 72 visitas fictícias. Ana Exemplo adicionada como vendedora. Veja [carga, regras e pendências](Documentos/VOLUME_E_CARTOES.md).
+
+- [Acompanhamento e conclusão de visitas em andamento](Documentos/VISITAS_EM_ANDAMENTO.md)

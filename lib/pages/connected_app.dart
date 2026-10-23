@@ -14,7 +14,12 @@ String errorMessage(Object error) {
   }
   if (error is PostgrestException) {
     if (error.code == '23505') {
-      return 'Código já cadastrado ou visita já em andamento. Confira os registros.';
+      if ('${error.message} ${error.details}'.contains(
+        'app_visits_one_running',
+      )) {
+        return 'Este responsável já possui uma visita em andamento. Conclua o atendimento aberto antes de iniciar outro.';
+      }
+      return 'Este código de cliente já está cadastrado. Informe outro código.';
     }
     if (error.code == '42501') {
       return 'Sua conta não tem permissão para esta operação.';
@@ -151,6 +156,41 @@ class _ConnectedHomeState extends State<ConnectedHome> {
   RowData? profile;
   List<RowData> clients = [], visits = [], users = [];
   bool loading = true, working = false;
+  final visitsScroll = ScrollController();
+  @override
+  void dispose() {
+    visitsScroll.dispose();
+    super.dispose();
+  }
+
+  void selectPage(int index) {
+    setState(() => selected = index);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted && visitsScroll.hasClients) visitsScroll.jumpTo(0);
+    });
+  }
+
+  bool redirectToRunning(String sellerId) {
+    final running = visits
+        .where(
+          (v) => v['seller_id'] == sellerId && v['status'] == 'em_andamento',
+        )
+        .firstOrNull;
+    if (running == null) return false;
+    setState(() => selected = 3);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted && visitsScroll.hasClients) visitsScroll.jumpTo(0);
+    });
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          '${person(sellerId)} já tem uma visita em andamento em ${name(running['client_id'] as String)}. Use “Concluir visita” no atendimento destacado.',
+        ),
+      ),
+    );
+    return true;
+  }
+
   String? error;
   int selected = 0;
   bool get admin => profile?['role'] == 'administrator';
@@ -250,6 +290,7 @@ class _ConnectedHomeState extends State<ConnectedHome> {
   }
 
   Future<void> newVisit(RowData client, bool start) async {
+    if (start && redirectToRunning(backend.auth.currentUser!.id)) return;
     final result = await showDialog<bool>(
       context: context,
       builder: (_) => VisitForm(client: client, start: start),
@@ -261,6 +302,9 @@ class _ConnectedHomeState extends State<ConnectedHome> {
   }
 
   Future<void> transition(RowData visit, String task) async {
+    if (task == 'iniciar' && redirectToRunning(visit['seller_id'] as String)) {
+      return;
+    }
     final notes = TextEditingController(text: visit['notes'] as String? ?? '');
     final confirmed = await showDialog<bool>(
       context: context,
@@ -384,11 +428,28 @@ class _ConnectedHomeState extends State<ConnectedHome> {
     ),
   );
   Widget visitCard(RowData v) => Card(
+    color: v['status'] == 'em_andamento' ? const Color(0xFFFFF4E6) : null,
+    shape: v['status'] == 'em_andamento'
+        ? RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14),
+            side: const BorderSide(color: Color(0xFFBB7100), width: 1.5),
+          )
+        : null,
     child: Padding(
       padding: const EdgeInsets.all(16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          if (v['status'] == 'em_andamento') ...[
+            const Text(
+              'ATENDIMENTO EM ANDAMENTO',
+              style: TextStyle(
+                color: Color(0xFF8C5200),
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 8),
+          ],
           Text(
             name(v['client_id'] as String),
             style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -421,9 +482,10 @@ class _ConnectedHomeState extends State<ConnectedHome> {
                   child: const Text('Cancelar agendamento'),
                 ),
               if (v['status'] == 'em_andamento')
-                FilledButton(
+                FilledButton.icon(
                   onPressed: working ? null : () => transition(v, 'concluir'),
-                  child: const Text('Concluir visita'),
+                  icon: const Icon(Icons.task_alt),
+                  label: const Text('Concluir visita'),
                 ),
             ],
           ),
@@ -475,10 +537,25 @@ class _ConnectedHomeState extends State<ConnectedHome> {
       ];
     }
     if (selected == 3) {
+      final running = visits
+          .where((v) => v['status'] == 'em_andamento')
+          .toList();
       return [
+        if (running.isNotEmpty) ...[
+          Text(
+            'Em andamento (${running.length})',
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
+          const Text(
+            'Conclua o atendimento aberto antes de iniciar outra visita para o mesmo responsável.',
+          ),
+          ...running.map(visitCard),
+          const SizedBox(height: 24),
+          Text('Demais visitas', style: Theme.of(context).textTheme.titleLarge),
+        ],
         const Text('Agende ou inicie uma visita pelas ações de um cliente.'),
         if (visits.isEmpty) const Text('Nenhuma visita registrada.'),
-        ...visits.map(visitCard),
+        ...visits.where((v) => v['status'] != 'em_andamento').map(visitCard),
       ];
     }
     return [
@@ -488,8 +565,8 @@ class _ConnectedHomeState extends State<ConnectedHome> {
         users: users,
         name: profile?['full_name'] as String? ?? '',
         admin: admin,
-        openClients: () => setState(() => selected = 1),
-        openVisits: () => setState(() => selected = 3),
+        openClients: () => selectPage(1),
+        openVisits: () => selectPage(3),
         visitCard: visitCard,
       ),
       const SizedBox(height: 16),
@@ -535,7 +612,7 @@ class _ConnectedHomeState extends State<ConnectedHome> {
             NavigationRail(
               selectedIndex: selected,
               labelType: NavigationRailLabelType.all,
-              onDestinationSelected: (i) => setState(() => selected = i),
+              onDestinationSelected: selectPage,
               destinations: [
                 for (var i = 0; i < labels.length; i++)
                   NavigationRailDestination(
@@ -564,6 +641,7 @@ class _ConnectedHomeState extends State<ConnectedHome> {
                     ),
                   )
                 : ListView(
+                    controller: visitsScroll,
                     padding: const EdgeInsets.all(24),
                     children: [
                       const Text('Ambiente acadêmico • dados fictícios'),
@@ -583,7 +661,7 @@ class _ConnectedHomeState extends State<ConnectedHome> {
           ? null
           : NavigationBar(
               selectedIndex: selected,
-              onDestinationSelected: (i) => setState(() => selected = i),
+              onDestinationSelected: selectPage,
               destinations: [
                 for (var i = 0; i < labels.length; i++)
                   NavigationDestination(icon: Icon(icons[i]), label: labels[i]),
