@@ -4,6 +4,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'main_menu.dart';
 import 'client_contact.dart';
 import 'commercial_dashboard.dart';
+import 'user_form.dart';
 
 typedef RowData = Map<String, dynamic>;
 SupabaseClient get backend => Supabase.instance.client;
@@ -281,6 +282,56 @@ class _ConnectedHomeState extends State<ConnectedHome> {
     }
   }
 
+  Future<void> userForm([RowData? user]) async {
+    if (!admin) return;
+    final result = await showDialog<bool>(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => UserForm(
+        user: user,
+        ownAccount: user?['id'] == backend.auth.currentUser!.id,
+      ),
+    );
+    if (result == true && mounted) await load();
+  }
+
+  Future<void> toggleUser(RowData user) async {
+    if (!admin || user['id'] == backend.auth.currentUser!.id) return;
+    final active = user['active'] == true;
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(active ? 'Desativar usuário?' : 'Reativar usuário?'),
+        content: Text(
+          '${user['full_name']}\n${active ? 'O acesso aos dados será bloqueado. Clientes e visitas serão preservados.' : 'O usuário voltará a ter acesso conforme seu perfil.'}',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context, false),
+            child: const Text('Cancelar'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(context, true),
+            child: const Text('Confirmar'),
+          ),
+        ],
+      ),
+    );
+    if (confirmed == true && mounted) {
+      await action(() async {
+        await backend.rpc(
+          'admin_update_profile',
+          params: {
+            'p_id': user['id'],
+            'p_name': user['full_name'],
+            'p_role': user['role'],
+            'p_active': !active,
+          },
+        );
+      });
+    }
+  }
+
   Future<void> clientForm([RowData? client]) async {
     final result = await showDialog<bool>(
       context: context,
@@ -512,6 +563,16 @@ class _ConnectedHomeState extends State<ConnectedHome> {
     }
     if (selected == 2) {
       return [
+        if (admin)
+          Align(
+            alignment: Alignment.centerLeft,
+            child: FilledButton.icon(
+              onPressed: working ? null : () => userForm(),
+              icon: const Icon(Icons.person_add_outlined),
+              label: const Text('Novo usuário'),
+            ),
+          ),
+        const SizedBox(height: 12),
         Text(
           admin
               ? 'Equipe cadastrada no ambiente acadêmico'
@@ -521,6 +582,29 @@ class _ConnectedHomeState extends State<ConnectedHome> {
           (u) => Card(
             child: ListTile(
               title: Text(u['full_name'] as String),
+              trailing: admin
+                  ? Wrap(
+                      children: [
+                        IconButton(
+                          tooltip: 'Editar usuário',
+                          onPressed: working ? null : () => userForm(u),
+                          icon: const Icon(Icons.edit_outlined),
+                        ),
+                        if (u['id'] != backend.auth.currentUser!.id)
+                          IconButton(
+                            tooltip: u['active'] == true
+                                ? 'Desativar usuário'
+                                : 'Reativar usuário',
+                            onPressed: working ? null : () => toggleUser(u),
+                            icon: Icon(
+                              u['active'] == true
+                                  ? Icons.person_off_outlined
+                                  : Icons.person_add_alt,
+                            ),
+                          ),
+                      ],
+                    )
+                  : null,
               subtitle: Text(
                 '${u['role'] == 'administrator'
                     ? 'Administrador'
@@ -532,7 +616,7 @@ class _ConnectedHomeState extends State<ConnectedHome> {
           ),
         ),
         const Text(
-          'Contas de acesso são provisionadas pelo administrador do projeto. Nenhuma senha é exibida nesta tela.',
+          'Somente o administrador gerencia usuários. A desativação preserva o histórico de clientes e visitas.',
         ),
       ];
     }
