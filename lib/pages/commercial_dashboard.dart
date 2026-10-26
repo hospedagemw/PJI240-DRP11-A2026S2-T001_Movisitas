@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'visits_export_dialog.dart';
+
 typedef DashboardRow = Map<String, dynamic>;
 
 class CommercialDashboard extends StatefulWidget {
@@ -27,6 +29,35 @@ class _CommercialDashboardState extends State<CommercialDashboard> {
   String period = 'month', seller = 'all';
   static const red = Color(0xFFED3237);
   static const ink = Color(0xFF383838);
+  void exportVisits() {
+    final now = DateTime.now();
+    final day = DateTime(now.year, now.month, now.day);
+    final start = switch (period) {
+      'today' => day,
+      'week' => DateTime(now.year, now.month, now.day - now.weekday + 1),
+      'month' => DateTime(now.year, now.month),
+      _ => null,
+    };
+    final end = switch (period) {
+      'today' => day,
+      'week' => DateTime(start!.year, start.month, start.day + 6),
+      'month' => DateTime(now.year, now.month + 1, 0),
+      _ => null,
+    };
+    showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => VisitsExportDialog(
+        admin: widget.admin,
+        users: widget.users,
+        initialSeller: seller,
+        initialRange: start == null
+            ? null
+            : DateTimeRange(start: start, end: end!),
+      ),
+    );
+  }
+
   static const states = {
     'agendada': 'Agendadas',
     'em_andamento': 'Em andamento',
@@ -316,6 +347,11 @@ class _CommercialDashboardState extends State<CommercialDashboard> {
                   onChanged: (v) => setState(() => seller = v!),
                 ),
               ),
+            OutlinedButton.icon(
+              onPressed: exportVisits,
+              icon: const Icon(Icons.download_outlined),
+              label: const Text('Exportar visitas'),
+            ),
             const Text(
               'Dados atualizados do Supabase',
               style: TextStyle(fontSize: 12, color: Color(0xFF707079)),
