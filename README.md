@@ -113,3 +113,5 @@ Indicadores clicáveis com consulta dos registros filtrados, mais 24 clientes e 
 - [Acompanhamento e conclusão de visitas em andamento](Documentos/VISITAS_EM_ANDAMENTO.md)
 
 - [Administração de usuários](Documentos/USUARIOS_ADMIN.md)
+
+- [Exportação de visitas em HTML](Documentos/EXPORTACAO_VISITAS.md)
