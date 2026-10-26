@@ -27,6 +27,7 @@ class _VisitsExportDialogState extends State<VisitsExportDialog> {
       ? widget.initialSeller
       : 'all';
   String status = 'all';
+  String grouping = 'status';
   bool busy = false;
   String? error;
   Future<List<ReportRow>> loadNames(
@@ -136,6 +137,7 @@ class _VisitsExportDialogState extends State<VisitsExportDialog> {
         statusLabel: visitStatusLabels[status] ?? 'Todos os status',
         teamLabel: label,
         generatedAt: now,
+        grouping: grouping,
       );
       downloadReport(
         html,
@@ -217,6 +219,22 @@ class _VisitsExportDialogState extends State<VisitsExportDialog> {
                 )
               else
                 const Text('Escopo: somente minhas visitas.'),
+              const SizedBox(height: 16),
+              DropdownButtonFormField<String>(
+                initialValue: grouping,
+                isExpanded: true,
+                decoration: const InputDecoration(
+                  labelText: 'Agrupar relatório',
+                ),
+                items: [
+                  for (final entry in visitGroupingLabels.entries)
+                    DropdownMenuItem(
+                      value: entry.key,
+                      child: Text(entry.value),
+                    ),
+                ],
+                onChanged: busy ? null : (v) => setState(() => grouping = v!),
+              ),
               const SizedBox(height: 16),
               OutlinedButton.icon(
                 onPressed: busy

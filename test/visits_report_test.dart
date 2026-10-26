@@ -4,6 +4,25 @@ import 'package:movisitas/data/visits_report.dart';
 import 'package:movisitas/pages/visits_export_dialog.dart';
 
 void main() {
+  test('Agrupamento separa IDs mesmo com nomes iguais e conta os status', () {
+    final html = buildVisitsHtml(
+      visits: [
+        {'seller_id': 'a', 'status': 'agendada', 'notes': 'REGISTRO_A'},
+        {'seller_id': 'b', 'status': 'concluida', 'notes': 'REGISTRO_B'},
+        {'seller_id': 'a', 'status': 'concluida', 'notes': 'REGISTRO_C'},
+      ],
+      clients: [],
+      users: [{'id': 'a', 'full_name': 'Nome <igual>'}, {'id': 'b', 'full_name': 'Nome <igual>'}],
+      periodLabel: 'Tudo', statusLabel: 'Todos', teamLabel: 'Equipe',
+      generatedAt: DateTime(2026), grouping: 'seller_status',
+    );
+    expect(html, contains('Nome &lt;igual&gt; — 2 visita(s)'));
+    expect(html, contains('Nome &lt;igual&gt; — 1 visita(s)'));
+    expect(html, contains('Agendada — 1 visita(s)'));
+    expect(RegExp('REGISTRO_[ABC]').allMatches(html).length, 3);
+    expect(html.indexOf('REGISTRO_C'), lessThan(html.indexOf('REGISTRO_B')));
+  });
+
   test('HTML escapa conteúdo e mantém observações como texto', () {
     final html = buildVisitsHtml(
       visits: [

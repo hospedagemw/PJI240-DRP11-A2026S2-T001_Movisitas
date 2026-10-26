@@ -32,3 +32,9 @@ Datas são apresentadas no horário local do dispositivo que gera o relatório. 
 ## Validação técnica
 
 Análise Flutter sem problemas; cinco testes aprovados para HTML escapado, resultado vazio, seletor restrito ao administrador e painel em larguras de celular e computador. Compilação web release concluída. A exportação utiliza as permissões já existentes no banco.
+
+## Agrupamento do relatório
+Antes de baixar, o usuário escolhe entre sem agrupamento, por status, por vendedor ou por vendedor e status. O padrão é por status. Cada seção mostra sua quantidade de visitas; seções vazias são omitidas. Os filtros de período, status e responsável continuam aplicados antes do agrupamento, respeitando os acessos de cada perfil. Vendedores com nomes iguais permanecem separados pelo identificador da conta.
+
+Validação: testes de separação por vendedor e status, contagens, nomes iguais, escape de conteúdo e restrição do seletor de equipe para vendedores.
+
