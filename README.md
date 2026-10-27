@@ -8,11 +8,17 @@ Projeto acadêmico da disciplina **PJI240-DRP11 — Projeto Integrador em Comput
 
 Centralizar clientes, agendas, vendedores e históricos de atendimento para melhorar a organização e o acompanhamento das visitas comerciais da Movipress.
 
-## Situação atual
+## Situação atual — revisão documental de 27/10/2026
 
-**Aplicação acadêmica com login, clientes e visitas integrados ao Supabase**, além da demonstração de importação com dados fictícios. Endereço: [movisitas-academico.pages.dev](https://movisitas-academico.pages.dev/). A entrega de 22/10/2026 inclui os perfis administrador e vendedor, cadastro e edição de clientes, contato/WhatsApp e ciclo de visitas. Consulte [funcionalidades, permissões e roteiro atualizado](Documentos/CLIENTES_VISITAS_AUTENTICACAO.md). A importação permanece demonstrativa, sem gravação dos pedidos pelo aplicativo.
+**Aplicação acadêmica com login, clientes e visitas integrados ao Supabase**, além da demonstração de importação com dados fictícios. Endereço: [movisitas-academico.pages.dev](https://movisitas-academico.pages.dev/). A entrega de 22/10/2026 inclui os perfis administrador e vendedor, cadastro e edição de clientes, contato/WhatsApp e ciclo de visitas. Consulte [funcionalidades, permissões e roteiro atualizado](Documentos/CLIENTES_VISITAS_AUTENTICACAO.md). A versão também inclui painel comercial, administração de usuários e exportação HTML com agrupamento por status e vendedor. A importação permanece demonstrativa, sem gravação dos pedidos pelo aplicativo. Os relatos datados abaixo descrevem etapas históricas; o guia de tecnologias consolida o funcionamento atual.
 
 O código de origem já existia antes desta migração. Os commits deste repositório registrarão sua incorporação e adaptação ao projeto acadêmico, além dos novos desenvolvimentos realizados pelo grupo.
+
+## Tecnologias e funcionamento
+
+O sistema utiliza **Dart e Flutter Web** na interface, **Supabase Auth** para login, **PostgreSQL no Supabase** para armazenar dados e **Cloudflare Pages** para hospedar o site. O GitHub mantém o código e seu histórico. A publicação utiliza upload direto e não ocorre automaticamente após commits.
+
+Consulte o [guia de tecnologias, arquitetura e funcionamento](Documentos/TECNOLOGIAS_E_FUNCIONAMENTO.md), com diagrama, responsabilidades, banco, permissões, configuração local e publicação.
 
 ## Documentação
 
@@ -47,11 +53,11 @@ A análise abrange **13 migrations, 8 tabelas da aplicação e 75 colunas** do p
 - [Supabase: arquitetura, autenticação e permissões](Documentos/Banco_de_Dados/05_SUPABASE.md)
 - [Rastreabilidade e plano de validação](Documentos/Banco_de_Dados/06_VALIDACAO.md)
 
-O esquema foi reconstruído dos scripts locais. Não houve inspeção do banco remoto, execução de migrations ou testes de integração nesta entrega. Os achados de revisão estão documentados para orientar a implementação. A tabela de pedidos ERP é uma extensão da origem, fora da primeira entrega funcional.
+Na entrega histórica de modelagem, o esquema foi reconstruído dos scripts locais, sem inspeção remota ou aplicação de migrations naquela fase. As integrações e verificações posteriores do ambiente acadêmico estão descritas nos guias de clientes/visitas e administração de usuários. Os achados de revisão estão documentados para orientar a implementação. A tabela de pedidos ERP é uma extensão da origem, fora da primeira entrega funcional.
 
 ## Próxima entrega
 
-Evoluir a administração de usuários pela interface e a importação autenticada persistente. A cada entrega, atualizar este README com o conteúdo incorporado, a branch, as verificações realizadas e as pendências.
+A administração de usuários já foi implementada; consulte o guia específico e suas ressalvas de validação. Evoluir a importação autenticada persistente e revisar os materiais da entrega final. A cada entrega, atualizar este README com o conteúdo incorporado, a branch, as verificações realizadas e as pendências.
 
 ## Mapa mental — ideação
 
@@ -75,7 +81,7 @@ Branch: `codex/prototipacao-telas`, criada a partir de `codex/mapa-mental-ideaca
 
 ## Organização
 
-Nesta etapa, `Documentos/` reúne o planejamento e os materiais acadêmicos. A aplicação Flutter ocupa a raiz do repositório, com `lib/`, `web/` e `test/`. Os scripts de evolução do banco ficarão em `supabase/migrations/`.
+Nesta etapa, `Documentos/` reúne o planejamento e os materiais acadêmicos. A aplicação Flutter ocupa a raiz do repositório, com `lib/`, `web/` e `test/`. Os scripts de evolução do banco estão em `supabase/migrations/`.
 
 ## Fluxo de trabalho
 

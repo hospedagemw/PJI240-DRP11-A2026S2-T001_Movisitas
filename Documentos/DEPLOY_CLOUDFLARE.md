@@ -1,10 +1,16 @@
 # Publicação no Cloudflare Pages
 
+## Estado atual — revisão documental de 27/10/2026
+
+A versão publicada possui autenticação e integração ao Supabase, painel, clientes, visitas, administração de usuários e exportação HTML agrupada. Os relatos da publicação inicial e de 21/10 abaixo são históricos. A última melhoria de exportação foi publicada em 26/10/2026, commit d4e223f.
+
+Para entender cada serviço, consulte [tecnologias e funcionamento](TECNOLOGIAS_E_FUNCIONAMENTO.md).
+
 Site acadêmico: https://movisitas-academico.pages.dev/
 
 Projeto Pages: `movisitas-academico`. Publicação inicial em 14/10/2026, verificada no navegador em 16/10/2026. Código publicado: commit `680843c`, da etapa do menu principal.
 
-## Conteúdo publicado
+## Conteúdo da publicação inicial — histórico
 
 Aplicação Flutter web com navegação entre Início, Clientes, Usuários, Visitas e Importação. A página inicial contém somente visitas fictícias. Os demais módulos apresentam o escopo previsto. Esta versão não possui login nem conexão com Supabase.
 
@@ -12,24 +18,24 @@ Aplicação Flutter web com navegação entre Início, Clientes, Usuários, Visi
 
 O projeto utiliza **Direct Upload**. Um commit ou merge no GitHub não publica automaticamente uma nova versão.
 
-1. Selecionar a versão revisada do código e executar na raiz:
+1. Selecionar a versão revisada do código. Preparar o arquivo local ignorado pelo Git com a URL e a chave pública do Supabase, conforme o guia de tecnologias. Executar na raiz:
 
 ```sh
 flutter pub get
 flutter analyze
 flutter test
-flutter build web
+flutter build web --release --dart-define-from-file=config.local.json
 ```
 
 2. Compactar o conteúdo de `build/web` em ZIP, com `index.html` na raiz do arquivo, sem incluir a pasta `web` como nível adicional.
 3. No painel Cloudflare, abrir Workers & Pages e o projeto existente `movisitas-academico`.
 4. Criar uma nova implantação de produção e enviar o ZIP.
-5. Aguardar a confirmação, abrir o endereço público e conferir a tela inicial e a navegação.
+5. Aguardar a confirmação, abrir o endereço público e conferir login, tela inicial, navegação e a funcionalidade modificada.
 6. Registrar o commit publicado, a data e o resultado da verificação na documentação da entrega.
 
 Não incluir arquivos `.env`, credenciais, dados profissionais ou arquivos de trabalho no pacote. O pacote contém apenas a saída web compilada. Não foi configurado domínio personalizado nem integração automática com Git.
 
-## Verificação desta entrega
+## Verificação da publicação inicial — histórico
 
 - Compilação anterior: análise sem apontamentos, dois testes aprovados e build web concluído, conforme o guia do menu.
 - Publicação: envio dos 38 arquivos concluído e sucesso confirmado pelo Cloudflare.
