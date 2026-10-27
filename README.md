@@ -8,13 +8,21 @@ Projeto acadêmico da disciplina **PJI240-DRP11 — Projeto Integrador em Comput
 
 Centralizar clientes, agendas, vendedores e históricos de atendimento para melhorar a organização e o acompanhamento das visitas comerciais da Movipress.
 
-## Situação atual
+## Situação atual — revisão documental de 27/10/2026
 
-**Documentação das fases 1 e 2, mapa mental e protótipo navegável das telas.** Este repositório ainda não contém a aplicação Flutter migrada; o protótipo HTML demonstra a experiência com dados fictícios. A migração do projeto Visitas será feita em entregas progressivas, com revisão e validação de cada módulo.
+**Aplicação acadêmica com login, clientes e visitas integrados ao Supabase**, além da demonstração de importação com dados fictícios. Endereço: [movisitas-academico.pages.dev](https://movisitas-academico.pages.dev/). A entrega de 22/10/2026 inclui os perfis administrador e vendedor, cadastro e edição de clientes, contato/WhatsApp e ciclo de visitas. Consulte [funcionalidades, permissões e roteiro atualizado](Documentos/CLIENTES_VISITAS_AUTENTICACAO.md). A versão também inclui painel comercial, administração de usuários e exportação HTML com agrupamento por status e vendedor. A importação permanece demonstrativa, sem gravação dos pedidos pelo aplicativo. Os relatos datados abaixo descrevem etapas históricas; o guia de tecnologias consolida o funcionamento atual.
 
 O código de origem já existia antes desta migração. Os commits deste repositório registrarão sua incorporação e adaptação ao projeto acadêmico, além dos novos desenvolvimentos realizados pelo grupo.
 
+## Tecnologias e funcionamento
+
+O sistema utiliza **Dart e Flutter Web** na interface, **Supabase Auth** para login, **PostgreSQL no Supabase** para armazenar dados e **Cloudflare Pages** para hospedar o site. O GitHub mantém o código e seu histórico. A publicação utiliza upload direto e não ocorre automaticamente após commits.
+
+Consulte o [guia de tecnologias, arquitetura e funcionamento](Documentos/TECNOLOGIAS_E_FUNCIONAMENTO.md), com diagrama, responsabilidades, banco, permissões, configuração local e publicação.
+
 ## Documentação
+
+- [Guia do sistema e roteiro falado para vídeo](Documentos/GUIA_E_ROTEIRO_VIDEO.md)
 
 - [Plano de ação do grupo](Documentos/Plano_de_acao-PJI240-DRP11-A2026S2-Grupo_17.pdf)
 - [Orientações da disciplina](Documentos/PI.txt)
@@ -28,8 +36,8 @@ O código de origem já existia antes desta migração. Os commits deste reposit
 | --- | --- | --- | --- |
 | 1 — Estrutura inicial | `fase-1/estrutura-inicial` | Apresentação, escopo e planejamento; commit `30882fd` | Integrada à main pelo PR #1 |
 | 2 — Modelagem do banco | `fase-2/modelagem-banco` | MER, DER, dicionário, análise de integridade e Supabase; commit `3e3d17b` | Entrega documental do PR #2; validação do banco remoto pendente |
-| 3 — Fundação da aplicação | A criar | Estrutura Flutter, identidade e navegação | Planejada |
-| 4 — Solução inicial | A criar | Clientes, vendedores, agenda, visitas e integração com o banco | Planejada |
+| 3 — Fundação da aplicação | `codex/fase-3-menu-principal` | Estrutura Flutter, identidade e menu; commit `680843c` | Publicada para demonstração; PR #5 em revisão |
+| 4 — Solução inicial | `codex/clientes-visitas-autenticacao` | Login, carteira de clientes, contato/WhatsApp, perfis e visitas no Supabase | Implementação e validação em 22/10/2026 |
 | 5 a 7 — Melhorias, validação e entrega final | A criar | Evolução conforme retorno da comunidade, testes e materiais acadêmicos | Planejadas |
 
 A fase 2 parte da entrega da fase 1 e inclui seus arquivos. A numeração identifica as entregas técnicas e não corresponde diretamente às quinzenas da faculdade. Consulte os períodos no [plano de migração](Documentos/PLANO_DE_MIGRACAO.md).
@@ -45,11 +53,11 @@ A análise abrange **13 migrations, 8 tabelas da aplicação e 75 colunas** do p
 - [Supabase: arquitetura, autenticação e permissões](Documentos/Banco_de_Dados/05_SUPABASE.md)
 - [Rastreabilidade e plano de validação](Documentos/Banco_de_Dados/06_VALIDACAO.md)
 
-O esquema foi reconstruído dos scripts locais. Não houve inspeção do banco remoto, execução de migrations ou testes de integração nesta entrega. Os achados de revisão estão documentados para orientar a implementação. A tabela de pedidos ERP é uma extensão da origem, fora da primeira entrega funcional.
+Na entrega histórica de modelagem, o esquema foi reconstruído dos scripts locais, sem inspeção remota ou aplicação de migrations naquela fase. As integrações e verificações posteriores do ambiente acadêmico estão descritas nos guias de clientes/visitas e administração de usuários. Os achados de revisão estão documentados para orientar a implementação. A tabela de pedidos ERP é uma extensão da origem, fora da primeira entrega funcional.
 
 ## Próxima entrega
 
-Preparar a fundação Flutter com dados fictícios e detalhar os ajustes do banco necessários à solução inicial. A cada entrega, atualizar este README com o conteúdo incorporado, a branch, as verificações realizadas e as pendências.
+A administração de usuários já foi implementada; consulte o guia específico e suas ressalvas de validação. Evoluir a importação autenticada persistente e revisar os materiais da entrega final. A cada entrega, atualizar este README com o conteúdo incorporado, a branch, as verificações realizadas e as pendências.
 
 ## Mapa mental — ideação
 
@@ -69,14 +77,47 @@ A entrega inclui **24 telas e fluxos navegáveis**, descrição de cada funciona
 
 ![Prévia da visão comercial](Documentos/Prototipacao/preview-desktop.png)
 
-Branch: `codex/prototipacao-telas`, criada a partir de `codex/mapa-mental-ideacao` para preservar a entrega anterior. Protótipo testado em computador e celular, sem conexão com o banco. As simulações não substituem os testes da aplicação nem a validação pela comunidade. A fundação Flutter permanece como próxima fase de implementação.
+Branch: `codex/prototipacao-telas`, criada a partir de `codex/mapa-mental-ideacao` para preservar a entrega anterior. Protótipo testado em computador e celular, sem conexão com o banco. As simulações não substituem os testes da aplicação nem a validação pela comunidade. A fundação Flutter está descrita na seção de implementação abaixo.
 
 ## Organização
 
-Nesta etapa, `Documentos/` reúne o planejamento e os materiais acadêmicos. Nas próximas entregas, a aplicação Flutter ocupará a raiz do repositório, com `lib/`, `web/`, `assets/` e `test/`. Os scripts de evolução do banco ficarão em `supabase/migrations/`.
+Nesta etapa, `Documentos/` reúne o planejamento e os materiais acadêmicos. A aplicação Flutter ocupa a raiz do repositório, com `lib/`, `web/` e `test/`. Os scripts de evolução do banco estão em `supabase/migrations/`.
 
 ## Fluxo de trabalho
 
 Cada entrega será preparada em uma branch, validada e enviada para revisão por Pull Request. A incorporação à `main` representa a aceitação daquela entrega. A branch da primeira fase é `fase-1/estrutura-inicial`.
 
 As datas e os responsáveis acadêmicos seguem o plano de ação do grupo. O envio de arquivos ao GitHub não substitui a entrega exigida no AVA.
+
+## Implementação — estrutura e menu principal (14/10/2026)
+
+A branch `codex/fase-3-menu-principal` inicia a aplicação Flutter para web. O menu responsivo permite navegar entre Início, Clientes, Usuários, Visitas e Importação. A página inicial apresenta três visitas fictícias; os outros módulos exibem seu escopo para as próximas entregas.
+
+Execute na raiz:
+
+```sh
+flutter pub get
+flutter run -d chrome
+```
+
+Consulte [a documentação da etapa e o roteiro para vídeo](Documentos/MENU_PRINCIPAL.md). Não há conexão com banco ou autenticação nesta entrega. A futura importação lerá o relatório de comissão e gravará os pedidos, sem cálculo de comissão.
+
+## Dados fictícios e vendas — 21/10/2026
+
+A demonstração apresenta 5 usuários sem login, 6 clientes e 12 visitas. O HTML de vendas contém 18 pedidos, totalizando R$ 43.508,25, sem cálculo de comissão. A tela importa o exemplo em memória e evita duplicações; o Supabase acadêmico guarda uma carga independente em schema isolado, sem sincronização com a tela.
+
+Consulte o [guia da demonstração e carga do banco](Documentos/DADOS_FICTICIOS.md) e o [HTML fictício de vendas](web/exemplos/vendas-ficticias.html).
+
+## Painel comercial — 22/10/2026
+
+Página inicial modernizada com filtros de período e responsável, cartões da carteira, panorama de visitas e acompanhamento da equipe. Consulte [funcionalidades e critérios dos indicadores](Documentos/PAINEL_COMERCIAL.md). Branch: codex/painel-comercial.
+
+## Volume fictício e cartões — 23/10/2026
+
+Indicadores clicáveis com consulta dos registros filtrados, mais 24 clientes e 72 visitas fictícias. Ana Exemplo adicionada como vendedora. Veja [carga, regras e pendências](Documentos/VOLUME_E_CARTOES.md).
+
+- [Acompanhamento e conclusão de visitas em andamento](Documentos/VISITAS_EM_ANDAMENTO.md)
+
+- [Administração de usuários](Documentos/USUARIOS_ADMIN.md)
+
+- [Exportação de visitas em HTML](Documentos/EXPORTACAO_VISITAS.md)

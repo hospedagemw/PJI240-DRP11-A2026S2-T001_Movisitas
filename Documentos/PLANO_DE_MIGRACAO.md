@@ -71,3 +71,7 @@ Complemento documental de ideação em `codex/mapa-mental-ideacao`: [mapa mental
 Entrega complementar em `codex/prototipacao-telas`, baseada na branch do mapa mental. O [protótipo navegável](Prototipacao/README.md) apresenta 23 telas e fluxos, com dados fictícios, descrição funcional, galeria de imagens e fontes consultadas. Foram verificados os principais fluxos simulados e a apresentação em computador e celular.
 
 A entrega representa a experiência proposta e não a migração Flutter ou a implantação do banco. O grupo poderá usar as jornadas para coletar sugestões da comunidade e priorizar a solução inicial; essa validação em campo ainda não foi realizada.
+
+## Atualização de 14/10/2026 — fundação Flutter
+
+Iniciada a fase 3 em `codex/fase-3-menu-principal`, com estrutura web, tema, menu responsivo e agenda fictícia. Consulte [a entrega do menu](MENU_PRINCIPAL.md). Esta implementação é incremental; clientes, usuários, visitas e importação terão branches próprias. Autenticação e perfis antecedem o acesso ao banco. A importação do relatório de comissão apenas grava pedidos; cálculo de comissão não integra o escopo.

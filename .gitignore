@@ -117,3 +117,12 @@ app.*.symbols
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
+# Application dependency lockfile
+!pubspec.lock
+.idea/
+*.iml
+
+# Configuração local de execução
+config.local.json
+.env
+.env.*
