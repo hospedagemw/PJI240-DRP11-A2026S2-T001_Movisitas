@@ -100,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   const SizedBox(height: 8),
                   const Text(
-                    'Ambiente acadêmico • utilize somente dados fictícios',
+                    'Gestão de clientes e visitas comerciais',
                   ),
                   const SizedBox(height: 24),
                   TextField(
@@ -728,8 +728,6 @@ class _ConnectedHomeState extends State<ConnectedHome> {
                     controller: visitsScroll,
                     padding: const EdgeInsets.all(24),
                     children: [
-                      const Text('Ambiente acadêmico • dados fictícios'),
-                      const SizedBox(height: 12),
                       Text(
                         labels[selected],
                         style: Theme.of(context).textTheme.headlineMedium,
@@ -856,7 +854,7 @@ class _ClientFormState extends State<ClientForm> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 const Text(
-                  'Preencha somente informações fictícias para a apresentação.',
+                  'Preencha as informações do cliente.',
                 ),
                 for (final e in labels.entries)
                   Padding(

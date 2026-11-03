@@ -79,7 +79,7 @@ class _DemoPanelState extends State<DemoPanel> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           if (widget.section == 1) ...[
-            const Text('6 clientes fictícios • carteira demonstrativa'),
+            const Text('Carteira de clientes'),
             for (final c in s.clients)
               card(
                 c['name'] as String,
@@ -89,7 +89,7 @@ class _DemoPanelState extends State<DemoPanel> {
           ],
           if (widget.section == 2) ...[
             const Text(
-              '5 personagens fictícios. Estes registros não possuem login nem senha.',
+              'Estes registros de exemplo não possuem login nem senha.',
             ),
             for (final u in s.users)
               card(
@@ -99,7 +99,7 @@ class _DemoPanelState extends State<DemoPanel> {
               ),
           ],
           if (widget.section == 3) ...[
-            const Text('12 visitas fictícias • outubro de 2026'),
+            const Text('Visitas • outubro de 2026'),
             for (final v in s.visits)
               card(
                 s.clientName(v['client'] as String),
@@ -109,7 +109,7 @@ class _DemoPanelState extends State<DemoPanel> {
           ],
           if (widget.section == 4) ...[
             const Text(
-              'Importe o relatório fictício para incluir pedidos na demonstração. Não há cálculo de comissão.',
+              'Importe o relatório de exemplo para incluir pedidos na demonstração. Não há cálculo de comissão.',
             ),
             const SizedBox(height: 12),
             Wrap(
@@ -119,7 +119,7 @@ class _DemoPanelState extends State<DemoPanel> {
                 OutlinedButton.icon(
                   onPressed: downloadDemoHtml,
                   icon: const Icon(Icons.download),
-                  label: const Text('Baixar HTML fictício'),
+                  label: const Text('Baixar HTML de exemplo'),
                 ),
                 FilledButton.icon(
                   onPressed: () => import(s, false),

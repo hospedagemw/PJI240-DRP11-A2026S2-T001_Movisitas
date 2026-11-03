@@ -61,7 +61,7 @@ class _MainMenuState extends State<MainMenu> {
                 builder: (context) => AlertDialog(
                   title: const Text('Ambiente demonstrativo'),
                   content: const Text(
-                    'Todos os dados são fictícios. Usuários, clientes, visitas e vendas são exemplos para apresentação. Não há conexão com banco de dados ou autenticação.',
+                    'Este modo apresenta exemplos de usuários, clientes, visitas e vendas. Não há conexão com banco de dados ou autenticação.',
                   ),
                   actions: [
                     TextButton(
@@ -103,7 +103,7 @@ class _MainMenuState extends State<MainMenu> {
                     children: [
                       Chip(
                         avatar: Icon(Icons.science_outlined, size: 18),
-                        label: Text('Demonstração • dados fictícios'),
+                        label: Text('Modo de demonstração'),
                       ),
                     ],
                   ),
@@ -175,7 +175,7 @@ class _MainMenuState extends State<MainMenu> {
                                       ),
                                     ),
                                     Text(visit.city),
-                                    const Text('Agendamento fictício'),
+                                    const Text('Agendamento'),
                                   ],
                                 ),
                               ),
@@ -185,7 +185,7 @@ class _MainMenuState extends State<MainMenu> {
                       ),
                     const SizedBox(height: 16),
                     const Text(
-                      'Use o menu para consultar clientes, usuários, visitas e importar vendas fictícias.',
+                      'Use o menu para consultar clientes, usuários, visitas e importar vendas.',
                     ),
                   ] else ...[
                     DemoPanel(section: selected, store: demo),
