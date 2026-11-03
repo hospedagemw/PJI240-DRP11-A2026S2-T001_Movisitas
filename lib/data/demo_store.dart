@@ -34,14 +34,14 @@ class DemoStore {
     final parsed = const OrderHtmlParser().parse(html);
     if (parsed.length != orders.length) {
       throw const FormatException(
-        'Utilize o HTML fictício fornecido, com os 18 pedidos completos.',
+        'Utilize o HTML de exemplo fornecido, com os 18 pedidos completos.',
       );
     }
     final accepted = <String>{};
     for (final row in parsed) {
       final match = orders.where((o) => o['id'] == row.sourceTitle).toList();
       if (match.length != 1) {
-        throw const FormatException('Pedido fora do conjunto fictício.');
+        throw const FormatException('Pedido fora do conjunto de exemplo.');
       }
       final o = match.single;
       final c = clients.singleWhere((c) => c['id'] == o['client']);
@@ -51,7 +51,7 @@ class DemoStore {
           (row.baseValue * 100 - (o['cents'] as int)).abs() > 0.001 ||
           !accepted.add(row.sourceTitle)) {
         throw const FormatException(
-          'Conteúdo diferente do exemplo fictício. Baixe novamente o HTML.',
+          'Conteúdo diferente do exemplo fornecido. Baixe novamente o HTML.',
         );
       }
     }
